@@ -17,36 +17,66 @@
 ##########################
 #FAKE DATA ALGORITHM
 ##########################
-
 counter<-c(0,0)
-minimumMean<-which.min(means) #We want to divide minimum and maximum mean scores.
+minimumMean<-which.min(means) #We want to divide minimum and maximum mean scores. Localize which of te 2 lists corresponds to each condition
 maximumMean<-which.max(means)
+#print(paste("scores max: ",scoresSorted[c(length(RESULTS_list[[minimumMean]])+1:length(RESULTS_list[[maximumMean]]))]))
 for( i in 1:length(RESULTS_list[[minimumMean]])){
   if( RESULTS_list[[minimumMean]][i] %in% scoresSorted[1:length(RESULTS_list[[minimumMean]])]){
-    # TODO: WHAT IF 2 COUNTRIES HAVE THE SAME SCORE? WE COULD ADD A NAMES COLUMN AND COMPARE THE NAMES (and change all the code to take this column into account)
-    # or create just a vector of names ordered by score?
     counter[1]=counter[1]+1
+    print(paste("minimumMean",length(RESULTS_list[[minimumMean]])))
+    print(paste("maximumMean",length(RESULTS_list[[maximumMean]])))
   }
   
 }
 for( i in 1:length(RESULTS_list[[maximumMean]])){
   if( RESULTS_list[[maximumMean]][i] %in% scoresSorted[c(length(RESULTS_list[[minimumMean]])+1:length(RESULTS_list[[maximumMean]]))]){
     counter[2]=counter[2]+1
+    
   }
   
 }
-# print(paste("counter",counter))
+print(paste("counter 1:",counter[1]))
+print(paste("counter 2:",counter[2]))
 percentageSuccess <- c(counter[1]/length(RESULTS_list[[minimumMean]])*100,counter[2]/length(RESULTS_list[[maximumMean]])*100)
-# print(paste("percentage success: ",percentageSuccess))
+print(paste("percentage success: ",percentageSuccess))
 
 #CHECK IF IMPROVEMENT IN % SUCCESS HAS OCCURED. IF NOT, RECOVER FEATURE
 
-WEIGHTS<-sparsehc$ws[,1]
-# print(paste("weight: ",WEIGHTS))
-deleteFeature <- which.max(WEIGHTS)
+print(paste("percentage success previous: ",percentageSuccessPrev))
 
 #aPrev<-a
-#if(percentageSuccess[1]>percentageSuccessPrev[1] || percentageSuccess[2]>percentageSuccessPrev[2]){
+if(percentageSuccess[1]>=percentageSuccessPrev[1] || percentageSuccess[2]>=percentageSuccessPrev[2]){
+  ##ATTENTION!! Decide the criteria, as we could have this example: one gets better and the other gets worse
+  #  "percentage success:  0"  "percentage success:  75"
+  #  "percentage success previous:  50" "percentage success previous:  25"
+  
+  
+  WEIGHTSfirst<-sparsehc$ws[,1]
+  print(paste("weight: ",WEIGHTSfirst))
+  deleteFeature <- which.max(WEIGHTSfirst)
+  print("improvement")
+  #if it has improved we remove another feature
+  aPrev<-a #we store the matrix to the former one, to recover it in case no improve is achieved
+  a<-a[,-(deleteFeature+1)] #As first columns is PISA scores
+  
+}else{
+  
+  #WEIGHTSfirst<-sparsehc$ws[,1]
+  #print(paste("weight: ",WEIGHTSfirst))
+  #deleteFeature <- which.max(WEIGHTSfirst)
+  #if it has improved we remove another feature
+  #aPrev<-a #we store the matrix to the former one, to recover it in case no improve is achieved
+  #a<-a[,-(deleteFeature+1)] #As first columns is PISA scores
+  
+  #We try with the second most important weight  
+  WEIGHTS<-WEIGHTSfirst[-deleteFeature]
+  print(paste("weight: ",WEIGHTS))
+  deleteFeature <- which.max(WEIGHTS) 
+  print("not improvement")
+  #we go back to previous condition  
+  a<-aPrev
+  
+}
 
-a<-a[,-(deleteFeature+1)] #As first columns is PISA scores
-#}
+percentageSuccessPrev <- percentageSuccess

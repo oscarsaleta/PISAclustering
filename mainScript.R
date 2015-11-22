@@ -24,7 +24,7 @@ repeat {
   source("featureSelection.R")
   
   # Stopping condition
-  if ( (percentageSuccess[1]>=THRESHOLD_PERCENTAGE && percentageSuccess[2]>=THRESHOLD_PERCENTAGE) || length(WEIGHTS)<7 )
+  if((percentageSuccess[1]>=THRESHOLD_PERCENTAGE && percentageSuccess[2]>=THRESHOLD_PERCENTAGE)||length(WEIGHTSfirst)<5)
     break
   
 }
