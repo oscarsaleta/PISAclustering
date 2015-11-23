@@ -37,8 +37,8 @@ x[,9] <- rnorm(10, mean = 4, sd = 0.5)
 #The new values will range [0->1]
 a <- matrix(c(rnorm(features*observations)),ncol=features)
 for (i in 1:9){
-  #a[,i] <- (x[,i]-min(x[,i]))/(max(x[,i])-min(x[,i]))
-  a[,i] <- (x[,i]-mean(x[,i]))/(sd(x[,i]))
+  a[,i] <- (x[,i]-min(x[,i]))/(max(x[,i])-min(x[,i]))
+  # a[,i] <- (x[,i]-mean(x[,i]))/(sd(x[,i]))
 }
 
 

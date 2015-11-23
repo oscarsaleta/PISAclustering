@@ -1,0 +1,6 @@
+1. Include bootstrap/permutation test in algorithm
+    - If test says so: compare countries w/ real data
+2. Loop for readding/removing weights (Oscar)
+3. Normalization! (Gemma)
+4. Use real data from files.
+5. Correlation test between features.
