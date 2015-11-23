@@ -19,3 +19,5 @@ MERGE <- sparsehc$hc$merge
 HEIGHT <- sparsehc$hc$height
 DEN <-cbind(MERGE,HEIGHT,deparse.level = 0) #Without labels
 nElements<-nrow(DEN)
+
+orderedWeights <- order(sparsehc$ws,decreasing=T)

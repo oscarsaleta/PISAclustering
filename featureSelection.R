@@ -52,9 +52,11 @@ if(percentageSuccess[1]>=percentageSuccessPrev[1] || percentageSuccess[2]>=perce
   #  "percentage success previous:  50" "percentage success previous:  25"
   
   
-  WEIGHTSfirst<-sparsehc$ws[,1]
-  print(paste("weight: ",WEIGHTSfirst))
-  deleteFeature <- which.max(WEIGHTSfirst)
+  #WEIGHTSfirst<-sparsehc$ws
+  #print(paste("weight: ",WEIGHTSfirst))
+  print(paste("weight: ",sparsehc$ws))
+  deleteFeature <- orderedWeights[1] #which.max(WEIGHTSfirst)
+  print(paste("Deleting feature ",deleteFeature))
   print("improvement")
   #if it has improved we remove another feature
   aPrev<-a #we store the matrix to the former one, to recover it in case no improve is achieved
@@ -70,9 +72,10 @@ if(percentageSuccess[1]>=percentageSuccessPrev[1] || percentageSuccess[2]>=perce
   #a<-a[,-(deleteFeature+1)] #As first columns is PISA scores
   
   #We try with the second most important weight  
-  WEIGHTS<-WEIGHTSfirst[-deleteFeature]
+  #WEIGHTS<-WEIGHTSfirst[-deleteFeature]
   print(paste("weight: ",WEIGHTS))
-  deleteFeature <- which.max(WEIGHTS) 
+  deleteFeature <- orderedWeights[2] #which.max(WEIGHTS)
+  print(paste("Deleting feature ",deleteFeature))
   print("not improvement")
   #we go back to previous condition  
   a<-aPrev
