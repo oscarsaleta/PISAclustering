@@ -14,7 +14,8 @@ scoresSorted <- getSortedScores(a);
 source("initializeDendogram.R")
 
 maxRemovedFeatures <- 6
-if (p>0.05) {
+SIGNIFICANCE <- 0.1
+if (p > SIGNIFICANCE) {
   # REPEAT THIS LOOP UNTIL STOPPING CONDITION IS MET
   repeat {
     if (removedFeatures >= maxRemovedFeatures)
@@ -37,7 +38,7 @@ if (p>0.05) {
     p <- permutationTest(GROUPS);
     # print(paste("p-value=",p))
     # If p < 0.05 this means groups are different
-    if (p < 0.05) {
+    if (p < SIGNIFICANCE) {
       break;
     } else {
       if (p > p.old) {
@@ -71,7 +72,11 @@ if (p>0.05) {
     }#end of else
   }#end of repeat
 }#end of if
-dendogram <- computeDendogram(a,y)
 
 # ficar aqui script per mostrar features rellevants
+print("Most relevant features:")
 print(mostRelevant(a,a.ini))
+print("Group1:")
+print(GROUPS[[1]])
+print("Group2:")
+print(GROUPS[[2]])

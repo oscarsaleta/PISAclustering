@@ -99,7 +99,6 @@ computeDendogram <- function(a,y) {
   sink();close(f)
   par(mfrow=c(1,2))
   plot(sparsehc)
-  plot(sparsehc$hc, labels=rep("", length(y)))
   # print(sparsehc)
   # Plot dendogram with colors
   par(mfrow=c(1,1))
@@ -194,9 +193,7 @@ permutationTest <- function(GROUPS) {
   st <- numeric(ntests)
   for(i in 1:ntests) {
     d <- sample(vect,total)
-    g1 <- d[1:n1]
-    g2 <- d[(n1+1):total]
-    st[i] <- mean(g1)-mean(g2)
+    st[i] <- mean(d[1:n1])-mean(d[(n1+1):total])
   }
   p <- length(st[st>null.mean])/ntests
   
