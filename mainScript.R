@@ -1,53 +1,77 @@
 rm(list=ls())
 library(sparcl)
 # Change working directory to the source file location
+source("clusteringLibrary.R")
 
 # GENERATE FAKE DATA
-source("generateData.R")
-# if we change this for a script that reads data we have to make sure the structure is the same
-# as in matrix 'a'
+gendata <- generateData();
+a.ini <- gendata$a
+a <- a.ini
+y <- gendata$y
+scoresSorted <- getSortedScores(a);
 
+# Compute dendogram and bootstrap test of initial data
+source("initializeDendogram.R")
 
-# REPEAT THIS LOOP UNTIL STOPPING CONDITION IS MET
-repeat {
-
-  # REPEAT INNER LOOP UNTIL THE REMOVED FEATURE IMPROVES THE RESULT
-  percentageSuccessPrev <- c(0,0)
-  THRESHOLD_PERCENTAGE <- 70 #If all of the clusters achieve this threshold then good features choice
-  aPrev <- a
+maxRemovedFeatures <- 6
+if (p>0.05) {
+  # REPEAT THIS LOOP UNTIL STOPPING CONDITION IS MET
   repeat {
+    if (removedFeatures >= maxRemovedFeatures)
+      break
+    # REMOVE FEATURE
+    a.old <- a;
+    orderedWeights.old <- orderedWeights;
+    a <- removeFeature(a,orderedWeights,nFeature);
+    
     # COMPUTE DENDOGRAM
-    source("computeDendogram.R")
-    
-    # COMPUTE GROUPS AT A HEIGHT FOR 2 GROUPS
-    twoGroupsHeight <- length(DEN[,1])-1
-    LimitHeight <- DEN[twoGroupsHeight,3]
-    source("cutDendogram.R")
-    
-    # COMPUTE GROUP STATISTICS
-    source("groupStatistics.R")
+    dendogram <- computeDendogram(a,y);
+    MERGE <- dendogram$merge;
+    DEN <- dendogram$den;
+    HEIGHT <- dendogram$height;
+    nElements <- dendogram$nElements;
+    orderedWeights <- dendogram$orderedWeights;
     
     # BOOTSTRAP TEST FOR TESTING EQUALITY OF MEANS
-    source("bootstrapTest.R")
-    # Exit if the groups are different
-    if (groupsAreDifferent) {
-      break
+    GROUPS <- cutDendogram2(DEN)
+    p <- permutationTest(GROUPS);
+    # print(paste("p-value=",p))
+    # If p < 0.05 this means groups are different
+    if (p < 0.05) {
+      break;
     } else {
-      # Check if the result has improved
-      source("removeFeature.R")
-      if (pvalueImproved) {
-        break
-      }
-    }
-    
-    # FEATURE REMOVAL AND RESULT COMPARISON
-    # source("featureSelection.R")
-    
-    # Stopping condition
-    # if((percentageSuccess[1]>=THRESHOLD_PERCENTAGE && percentageSuccess[2]>=THRESHOLD_PERCENTAGE)||length(WEIGHTSfirst)<5)
-      # break
-    
-  }
-}
+      if (p > p.old) {
+        enworsement <- p-p.old;
+        if (enworsement < enworsement.least) {
+          lessBadFeature <- nFeature
+          enworsement.least <- enworsement
+          lessBadOrder <- orderedWeights
+        }
+        # If p has increased this means result is worse
+        # Readd feature and remove next one in next iteration
+        a <- a.old
+        orderedWeights <- orderedWeights.old
+        nFeature <- nFeature + 1
+        if (nFeature >= 9-removedFeatures) {
+          a <- removeFeature(a,lessBadOrder,lessBadFeature);
+          removedFeatures <- removedFeatures+1
+          print("Removed one feature")
+          nFeature <- 1
+        }
+        next
+      } else {
+        # If result is better but not good enough
+        # Keep removing features
+        removedFeatures <- removedFeatures+1
+        print("Removed one feature")
+        nFeature <- 1
+        p.old <- p
+        next
+      }#end of else
+    }#end of else
+  }#end of repeat
+}#end of if
+dendogram <- computeDendogram(a,y)
 
 # ficar aqui script per mostrar features rellevants
+print(mostRelevant(a,a.ini))
