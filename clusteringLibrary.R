@@ -82,6 +82,30 @@ removeFeature <- function(a,weights,nFeature) {
 
 
 
+#    COMPUTE K-MEANS    #################################################
+#########################################################################
+computeKMeans <- function(a,y) {
+  f=file();sink(f)
+  perm.out <- KMeansSparseCluster.permute(a[,-1],wbounds = c(1.5,2:6),nperms = 5,K=2)
+  sink();close(f)
+  # plot(perm.out)
+  f=file();sink(f)
+  sparsekc <- KMeansSparseCluster(a[,-1],wbounds = perm.out$bestw, K=2)
+  sink();close(f)
+  groupColors <- ifelse(sparsekc[[1]]$Cs == 1,"red","blue")
+  realShapes <- ifelse(a[,1]<mean(a[,1]),16,17)
+  par(mfrow=c(1,2))
+  plot(sparsekc)
+  plot(a[,1],col=groupColors,pch=realShapes)
+  par(mfrow=c(1,1))
+  orderedWeights <- order(sparsekc[[1]]$ws,decreasing=T)
+  groups <- sparsekc[[1]]$Cs
+  GROUPS <- list(which(groups==1),which(groups==2))
+  return(list(groups=GROUPS,orderedWeights=orderedWeights))
+}
+
+
+
 #    COMPUTE DENDOGRAM    ###############################################
 #########################################################################
 computeDendogram <- function(a,y) {

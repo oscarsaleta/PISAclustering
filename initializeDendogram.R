@@ -1,13 +1,9 @@
 # COMPUTE DENDOGRAM FOR ORIGINAL MATRIX
-dendogram <- computeDendogram(a,y);
-MERGE <- dendogram$merge;
-DEN <- dendogram$den;
-HEIGHT <- dendogram$height;
-nElements <- dendogram$nElements;
-orderedWeights <- dendogram$orderedWeights;
+kmeans <- computeKMeans(a,y);
+orderedWeights <- kmeans$orderedWeights;
 
 # BOOTSTRAP TEST FOR TESTING EQUALITY OF MEANS
-GROUPS <- cutDendogram2(DEN)
+GROUPS <- kmeans$groups
 p <- permutationTest(GROUPS);
 print(paste("Initial p-value = ",p))
 
