@@ -4,7 +4,7 @@ library(sparcl)
 source("clusteringLibrary.R")
 
 # GENERATE FAKE DATA
-gendata <- generateData2();
+gendata <- generateData2(); # error pq el dendogram crea 1 grup d'1 element
 a.ini <- gendata$a
 a <- a.ini
 y <- gendata$y
