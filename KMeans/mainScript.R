@@ -4,16 +4,16 @@ library(sparcl)
 source("clusteringLibrary.R")
 
 # GENERATE FAKE DATA
-gendata <- generateData2();
-a.ini <- gendata$a
+rdata <- readData("merged_features.csv");
+a.ini <- rdata$a
 a <- a.ini
-y <- gendata$y
-scoresSorted <- getSortedScores(a);
+y <- rdata$y
+scoresSorted <- rdata$scores;
 
 # Compute dendogram and bootstrap test of initial data
 source("initializeGroups.R")
 
-maxRemovedFeatures <- 6
+maxRemovedFeatures <- 200
 SIGNIFICANCE <- 0.1
 if (p > SIGNIFICANCE) {
   # REPEAT THIS LOOP UNTIL STOPPING CONDITION IS MET
@@ -48,11 +48,12 @@ if (p > SIGNIFICANCE) {
         # Readd feature and remove next one in next iteration
         a <- a.old
         orderedWeights <- orderedWeights.old
+        print(paste0("Readd one feature, p=",toString(p)))
         nFeature <- nFeature + 1
         if (nFeature >= 9-removedFeatures) {
           a <- removeFeature(a,lessBadOrder,lessBadFeature);
           removedFeatures <- removedFeatures+1
-          print("Removed one feature")
+          print(paste0("Removed one feature, p=",toString(p)))
           nFeature <- 1
         }
         next
@@ -60,7 +61,7 @@ if (p > SIGNIFICANCE) {
         # If result is better but not good enough
         # Keep removing features
         removedFeatures <- removedFeatures+1
-        print("Removed one feature")
+        print(paste0("Removed one feature, p=",toString(p)))
         nFeature <- 1
         p.old <- p
         next

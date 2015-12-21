@@ -127,7 +127,27 @@ generateData2 <- function() {
   
   return(list(y=y,a=a))
 }
+#########################################################################
 
+
+
+#    READ DATA FROM FILE    #############################################
+#########################################################################
+readData <- function(fitxer) {
+  dataC <- read.csv(fitxer)
+  # delete Portugal5 (row 24)
+  dataC <- dataC[-24,]
+  data <- dataC[,!apply(dataC,2,function(x) { any( (x=='a') | is.na(x) ) })]
+  PISA <- read.csv("PISA.csv",header = FALSE)
+  PISA <- PISA[rowSums(is.na(PISA))==0,]
+  data <- cbind(PISA$V2,data)
+  data <- data[,-2] #delete first column (countries' names)
+  a <- as.matrix(data)
+  a <- a[order(a[,1]),]
+  y <- c(rep(1,length(a[,1])/2),rep(2,length(a[,1])-length(a[,1])/2))
+  return(list(y=y,a=a,score=sort(PISA$V2)))
+}
+#########################################################################
 
 
 #    GET SORTED SCORES FROM FAKE DATA    ################################

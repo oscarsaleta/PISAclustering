@@ -1,6 +1,6 @@
 #    GENERATE FAKE DATA    ##############################################
 #########################################################################
-generateData <- function(features=9,observations=10) {
+generateData <- function() {
   set.seed(1)
   # CREATE DATA
   features=9
@@ -59,8 +59,98 @@ generateData <- function(features=9,observations=10) {
 #########################################################################
 
 
+#    GENERATE FAKE DATA V2    ###########################################
+#########################################################################
+generateData2 <- function() {
+  set.seed(1)
+  
+  features=9
+  observations=10
+  x <- matrix(rep(0,features*observations),ncol=features)
+  
+  #Vector to distinguish between relevant features classes
+  y <- c(rep(1,5),rep(2,5))
+  #Vector to distinguish between fake relevant features classes
+  z <- c(rep(1,3),rep(2,2),rep(3,3),rep(4,2))
+  
+  #Relevant features
+  x[y==1,1] <- x[y==1,1]+rnorm(5, mean = 75, sd = 8) #Simulate %
+  x[y==1,2] <- x[y==1,2]+rnorm(5, mean = 0.9, sd = 0.1) #Simulate %
+  x[y==1,3] <- x[y==1,3]+rnorm(5, mean = 37, sd = 4) #Simulate age
+  
+  x[y==2,1] <- x[y==2,1]+rnorm(5, mean = 55, sd = 3)
+  x[y==2,2] <- x[y==2,2]+rnorm(5, mean = 1.2, sd = 0.1)
+  x[y==2,3] <- x[y==2,3]+rnorm(5, mean = 53, sd = 3)
+  
+  #Relevant fake features. Similarities bewteen different classes
+  x[z==1,4] <- x[z==1,4]+rnorm(3, mean = 0.8, sd = 0.05)
+  x[z==3,4] <- x[z==3,4]+rnorm(3, mean = 0.8, sd = 0.05)
+  
+  x[z==2,4] <- x[z==2,4]+rnorm(2, mean = 4, sd = 0.8)
+  x[z==4,4] <- x[z==4,4]+rnorm(2, mean = 4, sd = 0.1)
+  
+  x[z==1,5] <- x[z==1,5]+rnorm(3, mean = 45, sd = 3)
+  x[z==3,5] <- x[z==3,5]+rnorm(3, mean = 45, sd = 3)
+  
+  x[z==2,5] <- x[z==2,5]+rnorm(2, mean = 65, sd = 3)
+  x[z==4,5] <- x[z==4,5]+rnorm(2, mean = 65, sd = 3)
+  
+  x[z==1,6] <- x[z==1,6]+rnorm(3, mean = 500, sd = 10)
+  x[z==3,6] <- x[z==3,6]+rnorm(3, mean = 500, sd = 10)
+  
+  x[z==2,6] <- x[z==2,6]+rnorm(2, mean = 5000, sd = 100)
+  x[z==4,6] <- x[z==4,6]+rnorm(2, mean = 5000, sd = 100)
+  
+  #non relevant features. N(different averages and SE, but equivalent for all countries)
+  x[,7] <- rnorm(10, mean = 50, sd = 0.02)
+  x[,8] <- rnorm(10, mean = 0.5, sd = 0.011)
+  x[,9] <- rnorm(10, mean = 25, sd = 0.01)
+  
+  print(x)
+  #We create the matrix with the normalization of the features performed.
+  #The new values will range [0->1]
+  a <- matrix(c(rnorm(features*observations)),ncol=features)
+  for (i in 1:9){
+    #a[,i] <- (x[,i]-min(x[,i]))/(max(x[,i])-min(x[,i]))
+    a[,i] <- (x[,i])/(sd(x[,i]))
+    #a[,i] <- x[,i]
+  }
+  
+  
+  #PISA rates: in 2012 results -> max value=613; min value=368
+  PISA <- x <- matrix(c(rnorm(10,sd=40)),ncol=1)
+  ranking <-c(rep(1,5),rep(2,5))
+  PISA[ranking==1,] <- round(PISA[ranking ==1,]+550)
+  PISA[ranking==2,] <- round(PISA[ranking ==2,]+400)
+  
+  a<-cbind(PISA,a)
+  
+  return(list(y=y,a=a))
+}
+#########################################################################
 
-#    GET SORTED SCORES FROM DATA    #####################################
+
+
+#    READ DATA FROM FILE    #############################################
+#########################################################################
+readData <- function(fitxer) {
+  dataC <- read.csv(fitxer)
+  # delete Portugal5 (row 24)
+  dataC <- dataC[-24,]
+  data <- dataC[,!apply(dataC,2,function(x) { any( (x=='a') | is.na(x) ) })]
+  PISA <- read.csv("PISA.csv",header = FALSE)
+  PISA <- PISA[rowSums(is.na(PISA))==0,]
+  data <- cbind(PISA$V2,data)
+  data <- data[,-2] #delete first column (countries' names)
+  a <- as.matrix(data)
+  a <- a[order(a[,1]),]
+  y <- c(rep(1,length(a[,1])/2),rep(2,length(a[,1])-length(a[,1])/2))
+  return(list(y=y,a=a,score=sort(PISA$V2)))
+}
+#########################################################################
+
+
+#    GET SORTED SCORES FROM FAKE DATA    ################################
 #########################################################################
 getSortedScores <- function(a) {
   scores <- a[,1]
