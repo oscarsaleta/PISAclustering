@@ -4,17 +4,17 @@ library(sparcl)
 source("clusteringLibrary.R")
 
 # GENERATE FAKE DATA
-gendata <- generateData();
-a.ini <- gendata$a
+rdata <- readData("merged_features.csv");
+a.ini <- rdata$a
 a <- a.ini
-y <- gendata$y
-scoresSorted <- getSortedScores(a);
+y <- rdata$y
+scoresSorted <- rdata$scores;
 
 # Compute dendogram and bootstrap test of initial data
 source("initializeDendogram.R")
 
-maxRemovedFeatures <- 6
-SIGNIFICANCE <- 0.1
+maxRemovedFeatures <- 150
+SIGNIFICANCE <- 0.015
 if (p > SIGNIFICANCE) {
   # REPEAT THIS LOOP UNTIL STOPPING CONDITION IS MET
   repeat {
@@ -53,10 +53,11 @@ if (p > SIGNIFICANCE) {
         a <- a.old
         orderedWeights <- orderedWeights.old
         nFeature <- nFeature + 1
-        if (nFeature >= 9-removedFeatures) {
+        print(paste0("Readd one feature, p=",toString(p)))
+        if (nFeature >= ncol(a)-2-removedFeatures) {
           a <- removeFeature(a,lessBadOrder,lessBadFeature);
           removedFeatures <- removedFeatures+1
-          print("Removed one feature")
+          print(paste0("Removed one feature, p=",toString(p)))
           nFeature <- 1
         }
         next
@@ -64,7 +65,7 @@ if (p > SIGNIFICANCE) {
         # If result is better but not good enough
         # Keep removing features
         removedFeatures <- removedFeatures+1
-        print("Removed one feature")
+        print(paste0("Removed one feature, p=",toString(p)))
         nFeature <- 1
         p.old <- p
         next
@@ -73,10 +74,16 @@ if (p > SIGNIFICANCE) {
   }#end of repeat
 }#end of if
 
+if (removedFeatures == maxRemovedFeatures) {
+  #fer que faci de nou el millor dendograma abans d'acabar
+}
+
+
 # ficar aqui script per mostrar features rellevants
 print("Most relevant features:")
 print(mostRelevant(a,a.ini))
 print("Group1:")
-print(GROUPS[[1]])
+print(sort(GROUPS[[1]]))
 print("Group2:")
-print(GROUPS[[2]])
+print(sort(GROUPS[[2]]))
+print(paste("Last p-value =",p))
