@@ -130,7 +130,7 @@ generateData2 <- function() {
 
 
 
-#    GET SORTED SCORES FROM DATA    #####################################
+#    GET SORTED SCORES FROM FAKE DATA    ################################
 #########################################################################
 getSortedScores <- function(a) {
   scores <- a[,1]

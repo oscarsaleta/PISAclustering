@@ -4,14 +4,14 @@ library(sparcl)
 source("clusteringLibrary.R")
 
 # GENERATE FAKE DATA
-gendata <- generateData2(); # error pq el dendogram crea 1 grup d'1 element
+gendata <- generateData();
 a.ini <- gendata$a
 a <- a.ini
 y <- gendata$y
 scoresSorted <- getSortedScores(a);
 
 # Compute dendogram and bootstrap test of initial data
-source("initializeGroups.R")
+source("initializeDendogram.R")
 
 maxRemovedFeatures <- 6
 SIGNIFICANCE <- 0.1
@@ -26,11 +26,15 @@ if (p > SIGNIFICANCE) {
     a <- removeFeature(a,orderedWeights,nFeature);
     
     # COMPUTE DENDOGRAM
-    kmeans <- computeKMeans(a,y);
-    orderedWeights <- kmeans$orderedWeights;
+    dendogram <- computeDendogram(a,y);
+    MERGE <- dendogram$merge;
+    DEN <- dendogram$den;
+    HEIGHT <- dendogram$height;
+    nElements <- dendogram$nElements;
+    orderedWeights <- dendogram$orderedWeights;
     
     # BOOTSTRAP TEST FOR TESTING EQUALITY OF MEANS
-    GROUPS <- kmeans$groups
+    GROUPS <- cutDendogram2(DEN)
     p <- permutationTest(GROUPS);
     # print(paste("p-value=",p))
     # If p < 0.05 this means groups are different
@@ -76,4 +80,3 @@ print("Group1:")
 print(GROUPS[[1]])
 print("Group2:")
 print(GROUPS[[2]])
-print(paste("Last p-value =",p))
