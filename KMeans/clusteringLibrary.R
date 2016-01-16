@@ -332,3 +332,128 @@ mostRelevant <- function(a,a.ini) {
   return(relevantFeatures)
 }
 #########################################################################
+
+
+
+#   FORWARD FEATURE ADDITION    #########################################
+#########################################################################
+forwardFeatureAddition <- function(a,r) {
+  set.seed(r)
+  
+  ab <- cbind(a[,1],a[,sample(2:ncol(a))])
+  #print(a)
+  
+  n<-2
+  index <- n
+  pPrev<- 0
+  p_threshold <- 1
+  
+  aCluster <- ab[,-1]
+  aCluster <- aCluster[,1]
+  
+  #FEATURES LOOP
+  repeat{
+    #2-MEANS GROUPS
+    Group1 <- NULL
+    Group2 <- NULL
+    cl<-kmeans(aCluster,2)
+    
+    for(i in 1:nrow(PISA)){
+      if(cl$cluster[[i]] == 1){
+        Group1<-cbind(Group1,ab[i,1])
+      }
+      else{
+        Group2<-cbind(Group2,ab[i,1])
+      }
+    }
+    
+    #FIND COUNTRY LABEL
+    Group1Countries <- sapply(Group1, function(i){which(i == ab[,1])})
+    Group2Countries <- sapply(Group2, function(i){which(i == ab[,1])})
+    
+    GROUPS <- list(Group1Countries,Group2Countries)
+    
+    p<-permutationTest(GROUPS)
+    n<-n+1
+  
+    if(n==ncol(a)){
+      break
+    }
+    
+    if(pPrev-p>0.03){
+      #If gets worse
+      aCluster <- aCluster[,-(ncol(aCluster))]
+    }
+    else{
+      pPrev <- p
+    }
+  
+    aCluster <- cbind(aCluster,a[,n])
+    
+  }#end-repeat
+  
+  return(list(p=pPrev,aCluster=aCluster))
+  
+}
+#########################################################################
+
+#   GET GROUPS FROM FORWARD ADDITION OUTPUT   ###########################
+#########################################################################
+getGroups <- function(aIni,r,pPrev,aCluster,print=FALSE) {
+  if (print==TRUE) {
+    print("r: ")
+    print(r)
+    print("Final p-value")
+    print(pPrev)
+  }
+  relevantFeatures <- NULL
+  for(i in 2:ncol(aIni)){
+    for(j in 1:ncol(aCluster)){
+      if((aIni[1,i]==aCluster[1,j])&(aIni[2,i]==aCluster[2,j])){ #To avoid repetitions
+        relevantFeatures <- c(relevantFeatures,i-1)
+      }
+    }
+  }
+  if (print==TRUE)
+    print(relevantFeatures)
+  Group1 <- NULL
+  Group2 <- NULL
+  cl<-kmeans(aCluster,2)
+  
+  for(i in 1:30){
+    if(cl$cluster[[i]] == 1){
+      Group1<-cbind(Group1,a[i,1])
+    }
+    else{
+      Group2<-cbind(Group2,a[i,1])
+    }
+  }
+  return(list(cl=cl,g1=Group1,g2=Group2,relevantFeatures=relevantFeatures))
+}
+#########################################################################
+
+loopThroughSeeds <- function(a,maxSeed) {
+  sortedScores <- getSortedScores(a)
+  fitness <- 0
+  bestFitness <- 0
+  for (i in 0:maxSeed) {
+    f <- forwardFeatureAddition(a,i)
+    groups <- getGroups(a,i,f$p,f$aCluster)
+    badTail <- sortedScores[1:floor(0.25*length(sortedScores))]
+    goodTail <- sortedScores[ceiling(0.75*length(sortedScores)):length(sortedScores)]
+    fitness <- 0
+    for (j in 1:length(groups[['g1']])) {
+      if (groups[['g1']][j] %in% goodTail) 
+        fitness <- fitness+1
+    }
+    for (j in 1:length(groups[['g2']])) {
+      if (groups[['g2']][j] %in% badTail)
+        fitness <- fitness+1
+    }
+    if (fitness>bestFitness) {
+      bestFitness <- fitness
+      bestSeed <- i
+    }
+  }
+  return(list(seed=bestSeed,accuracy=bestFitness/length(sortedScores)))
+}

@@ -1,4 +1,4 @@
-# COMPUTE DENDOGRAM FOR ORIGINAL MATRIX
+# COMPUTE K-MEANS FOR ORIGINAL MATRIX
 kmeans <- computeKMeans(a,y);
 orderedWeights <- kmeans$orderedWeights;
 

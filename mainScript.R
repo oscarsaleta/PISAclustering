@@ -8,12 +8,12 @@ rdata <- readData("merged_features.csv");
 a.ini <- rdata$a
 a <- a.ini
 y <- rdata$y
-scoresSorted <- rdata$scores;
+scoresSorted <- rdata$score;
 
 # Compute dendogram and bootstrap test of initial data
 source("initializeDendogram.R")
 
-maxRemovedFeatures <- 150
+maxRemovedFeatures <- 200
 SIGNIFICANCE <- 0.015
 if (p > SIGNIFICANCE) {
   # REPEAT THIS LOOP UNTIL STOPPING CONDITION IS MET
@@ -39,6 +39,7 @@ if (p > SIGNIFICANCE) {
     # print(paste("p-value=",p))
     # If p < 0.05 this means groups are different
     if (p < SIGNIFICANCE) {
+      dendogram <- computeDendogram(a,y);
       break;
     } else {
       if (p > p.old) {
