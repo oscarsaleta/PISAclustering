@@ -1,329 +1,1357 @@
-'feature_number','feature','feature_type','in_file'
-1,'Female - ','Percentage','888933042333.csv'
-2,'Percentage of teachers in each age group - Under 25 years','Percentage','888933042333.csv'
-3,' - 25-29 years','Percentage','888933042333.csv'
-4,' - 30-39 years','Percentage','888933042333.csv'
-5,' - 40-49 years','Percentage','888933042333.csv'
-6,' - 50-59 years','Percentage','888933042333.csv'
-7,' - 60 years or more','Percentage','888933042333.csv'
-8,'Average age - ','Average','888933042333.csv'
-9,'Female - ','Percentage','888933042352.csv'
-10,'Percentage of teachers in each age group - Under 25 years','Percentage','888933042352.csv'
-11,' - 25-29 years','Percentage','888933042352.csv'
-12,' - 30-39 years','Percentage','888933042352.csv'
-13,' - 40-49 years','Percentage','888933042352.csv'
-14,' - 50-59 years','Percentage','888933042352.csv'
-15,' - 60 years or more','Percentage','888933042352.csv'
-16,'Average age - ','Average','888933042352.csv'
-17,'Female - ','Percentage','888933042371.csv'
-18,'Percentage of teachers in each age group - Under 25 years','Percentage','888933042371.csv'
-19,' - 25-29 years','Percentage','888933042371.csv'
-20,' - 30-39 years','Percentage','888933042371.csv'
-21,' - 40-49 years','Percentage','888933042371.csv'
-22,' - 50-59 years','Percentage','888933042371.csv'
-23,' - 60 years or more','Percentage','888933042371.csv'
-24,'Average age - ','Average','888933042371.csv'
-25,'Female -  - 2008','Percentage','888933042390.csv'
-26,' -  - 2013','Percentage','888933042390.csv'
-27,'Percentage of teachers in each age group - Under 25 years - 2008','Percentage','888933042390.csv'
-28,' -  - 2013','Percentage','888933042390.csv'
-29,' - 25-29 years - 2008','Percentage','888933042390.csv'
-30,' -  - 2013','Percentage','888933042390.csv'
-31,' - 30-39 years - 2008','Percentage','888933042390.csv'
-32,' -  - 2013','Percentage','888933042390.csv'
-33,' - 40-49 years - 2008','Percentage','888933042390.csv'
-34,' -  - 2013','Percentage','888933042390.csv'
-35,' - 50-59 years - 2008','Percentage','888933042390.csv'
-36,' -  - 2013','Percentage','888933042390.csv'
-37,' - 60 years or more - 2008','Percentage','888933042390.csv'
-38,' - 2013','Percentage','888933042390.csv'
-39,'Highest level of formal education completed - Below ISCED level 5','Percentage','888933042409.csv'
-40,' - ISCED level 5B2','Percentage','888933042409.csv'
-41,' - ISCED level 5A','Percentage','888933042409.csv'
-42,' - ISCED level 6','Percentage','888933042409.csv'
-43,'Highest level of formal education completed - Below ISCED level 5','Percentage','888933042428.csv'
-44,' - ISCED level 5B2','Percentage','888933042428.csv'
-45,' - ISCED level 5A','Percentage','888933042428.csv'
-46,' - ISCED level 6','Percentage','888933042428.csv'
-47,'Highest level of formal education completed - Below ISCED level 5 - 2008','Percentage','888933042466.csv'
-48,' -  - 2013','Percentage','888933042466.csv'
-49,' - ISCED level 5B4 - 2008','Percentage','888933042466.csv'
-50,' -  - 2013','Percentage','888933042466.csv'
-51,' - ISCED level 5A - 2008','Percentage','888933042466.csv'
-52,' -  - 2013','Percentage','888933042466.csv'
-53,' - ISCED level 6 - 2008','Percentage','888933042466.csv'
-54,' - 2013','Percentage','888933042466.csv'
-55,'Completion of teacher education or training programme -  - ','Percentage','888933042485.csv'
-56,'Elements included in formal education and training - Content of the subject(s) being taught - For all subjects','Percentage','888933042485.csv'
-57,' -  - For some subjects','Percentage','888933042485.csv'
-58,' - Pedagogy of the subject(s) being taught - For all subjects','Percentage','888933042485.csv'
-59,' -  - For some subjects','Percentage','888933042485.csv'
-60,' - Practice in the subject(s) being taught - For all subjects','Percentage','888933042485.csv'
-61,' - For some subjects','Percentage','888933042485.csv'
-62,'Extent to which teachers feel prepared for the following elements in their teaching - Content of the subject(s) being taught - Not at all or somewhat prepared','Percentage','888933042504.csv'
-63,' -  - Well or very well prepared','Percentage','888933042504.csv'
-64,' - Pedagogy of the subject(s) being taught - Not at all or somewhat prepared','Percentage','888933042504.csv'
-65,' -  - Well or very well prepared','Percentage','888933042504.csv'
-66,' - Practice in the subject(s) being taught - Not at all or somewhat prepared','Percentage','888933042504.csv'
-67,' - Well or very well prepared','Percentage','888933042504.csv'
-68,'Extent to which teachers feel prepared for the following elements in their teaching - Content of the subject(s) being taught - Not at all prepared','Percentage','888933042523.csv'
-69,' -  - Somewhat prepared','Percentage','888933042523.csv'
-70,' -  - Well prepared','Percentage','888933042523.csv'
-71,' -  - Very well prepared','Percentage','888933042523.csv'
-72,' - Pedagogy of the subject(s) being taught - Not at all prepared','Percentage','888933042523.csv'
-73,' -  - Somewhat prepared','Percentage','888933042523.csv'
-74,' -  - Well prepared','Percentage','888933042523.csv'
-75,' -  - Very well prepared','Percentage','888933042523.csv'
-76,' - Practice in the subject(s) being taught - Not at all prepared','Percentage','888933042523.csv'
-77,' - Somewhat prepared','Percentage','888933042523.csv'
-78,' - Well prepared','Percentage','888933042523.csv'
-79,' - Very well prepared','Percentage','888933042523.csv'
-80,'Average years of working experience as a teacher at this school','Average','888933042580.csv'
-81,'Average years of working experience as a teacher in total','Average','888933042580.csv'
-82,'Average years of working experience in other education roles','Average','888933042580.csv'
-83,'Average years of working experience in other jobs','Average','888933042580.csv'
-84,'Average years of working experience as a teacher at this school','Average','888933042599.csv'
-85,'Average years of working experience as a teacher in total','Average','888933042599.csv'
-86,'Average years of working experience in other education roles','Average','888933042599.csv'
-87,'Average years of working experience in other jobs','Average','888933042599.csv'
-88,'Average years of working experience as a teacher at this school','Average','888933042618.csv'
-89,'Average years of working experience as a teacher in total','Average','888933042618.csv'
-90,'Average years of working experience in other education roles','Average','888933042618.csv'
-91,'Average years of working experience in other jobs','Average','888933042618.csv'
-92,'Years working as a teacher at this school - Less than 3 years','Percentage','888933042637.csv'
-93,' - 3-10 years','Percentage','888933042637.csv'
-94,' - 11-20 years','Percentage','888933042637.csv'
-95,' - More than 20 years','Percentage','888933042637.csv'
-96,'Years working as a teacher in total - Less than 3 years','Percentage','888933042637.csv'
-97,' - 3-10 years','Percentage','888933042637.csv'
-98,' - 11-20 years','Percentage','888933042637.csv'
-99,' - More than 20 years','Percentage','888933042637.csv'
-100,'Years working in other education roles - Less than 3 years','Percentage','888933042637.csv'
-101,' - 3-10 years','Percentage','888933042637.csv'
-102,' - 11-20 years','Percentage','888933042637.csv'
-103,' - More than 20 years','Percentage','888933042637.csv'
-104,'Years working in other jobs - Less than 3 years','Percentage','888933042637.csv'
-105,' - 3-10 years','Percentage','888933042637.csv'
-106,' - 11-20 years','Percentage','888933042637.csv'
-107,' - More than 20 years','Percentage','888933042637.csv'
-108,'Full time (more than 900f full-time hours) - ','Percentage','888933042656.csv'
-109,'Part time (710 900f full-time hours) - ','Percentage','888933042656.csv'
-110,'Part time (500 700f full-time hours) - ','Percentage','888933042656.csv'
-111,'Part time (less than 500f full-time hours) - ','Percentage','888933042656.csv'
-112,'Reason stated for working part time - Teacher chose to work part time','Percentage','888933042656.csv'
-113,' - There was no possibility to work full time','Percentage','888933042656.csv'
-114,'Full time3 - 2008','Percentage','888933042675.csv'
-115,' - 2013','Percentage','888933042675.csv'
-116,'Part time (500 900f full-time hours) - 2008','Percentage','888933042675.csv'
-117,' - 2013','Percentage','888933042675.csv'
-118,'Part time (less than 500f full-time hours) - 2008','Percentage','888933042675.csv'
-119,' - 2013','Percentage','888933042675.csv'
-120,'Permanently employed','Percentage','888933042694.csv'
-121,'Fixed-term contract: More than 1 school year','Percentage','888933042694.csv'
-122,'Fixed-term contract: 1 school year or less','Percentage','888933042694.csv'
-123,'Permanently employed - 2008','Percentage','888933042713.csv'
-124,' - 2013','Percentage','888933042713.csv'
-125,'Fixed-term contract: More than 1 school year - 2008','Percentage','888933042713.csv'
-126,' - 2013','Percentage','888933042713.csv'
-127,'Fixed-term contract: 1 school year or less - 2008','Percentage','888933042713.csv'
-128,' - 2013','Percentage','888933042713.csv'
-129,'Public schools1 - ','Percentage','888933042998.csv'
-130,'Private schools2 - ','Percentage','888933042998.csv'
-131,'Schools that compete with two or more other schools for at least some of their students - ','Percentage','888933042998.csv'
-132,'Schools that compete with one other school for at least some of their students - ','Percentage','888933042998.csv'
-133,'Schools that do not compete with other schools for their students - ','Percentage','888933042998.csv'
-134,'Public schools1 - ','Percentage','888933043017.csv'
-135,'Private schools2 - ','Percentage','888933043017.csv'
-136,'Schools that compete with two or more other schools for at least some of their students - ','Percentage','888933043017.csv'
-137,'Schools that compete with one other school for at least some of their students - ','Percentage','888933043017.csv'
-138,'Schools that do not compete with other schools for their students - ','Percentage','888933043017.csv'
-139,'Public schools1 - ','Percentage','888933043036.csv'
-140,'Private schools2 - ','Percentage','888933043036.csv'
-141,'Schools that compete with two or more other schools for at least some of their students3 - ','Percentage','888933043036.csv'
-142,'Schools that compete with one other school for at least some of their students3 - ','Percentage','888933043036.csv'
-143,'Schools that do not compete with other schools for their students3 - ','Percentage','888933043036.csv'
-144,'Number of students in schools1','Average','888933043074.csv'
-145,'Number of teachers in schools1','Average','888933043074.csv'
-146,'Ratio of students to number of teachers2','Average','888933043074.csv'
-147,'Ratio of teachers to number of personnel for pedagogical support','Average','888933043074.csv'
-148,'Ratio of teachers to number of school administrative or management personnel','Average','888933043074.csv'
-149,'Average class size3','Average','888933043074.csv'
-150,'Number of students in schools1','Average','888933043093.csv'
-151,'Number of teachers in schools1','Average','888933043093.csv'
-152,'Ratio of students to number of teachers2','Average','888933043093.csv'
-153,'Ratio of teachers to number of personnel for pedagogical support','Average','888933043093.csv'
-154,'Ratio of teachers to number of school administrative or management personnel','Average','888933043093.csv'
-155,'Average class size3','Average','888933043093.csv'
-156,'Shortage of qualified and/or well-performing teachers','Percentage','888933043112.csv'
-157,'Shortage of teachers with competences in teaching students with special needs','Percentage','888933043112.csv'
-158,'Shortage of vocational teachers','Percentage','888933043112.csv'
-159,'Shortage or inadequacy of instructional materials','Percentage','888933043112.csv'
-160,'Shortage or inadequacy of computers for instruction','Percentage','888933043112.csv'
-161,'Insufficient internet access','Percentage','888933043112.csv'
-162,'Shortage or inadequacy of computer software for instruction','Percentage','888933043112.csv'
-163,'Shortage or inadequacy of library materials','Percentage','888933043112.csv'
-164,'Shortage of support personnel','Percentage','888933043112.csv'
-165,'Shortage of qualified and/or well-performing teachers - Not at all','Percentage','888933043131.csv'
-166,' - Very little','Percentage','888933043131.csv'
-167,' - To some extent','Percentage','888933043131.csv'
-168,' - A lot','Percentage','888933043131.csv'
-169,'Shortage of teachers with competences in teaching students with special needs - Not at all','Percentage','888933043131.csv'
-170,' - Very little','Percentage','888933043131.csv'
-171,' - To some extent','Percentage','888933043131.csv'
-172,' - A lot','Percentage','888933043131.csv'
-173,'Shortage of vocational teachers - Not at all','Percentage','888933043131.csv'
-174,' - Very little','Percentage','888933043131.csv'
-175,' - To some extent','Percentage','888933043131.csv'
-176,' - A lot','Percentage','888933043131.csv'
-177,'Shortage or inadequacy of instructional materials - Not at all','Percentage','888933043131.csv'
-178,' - Very little','Percentage','888933043131.csv'
-179,' - To some extent','Percentage','888933043131.csv'
-180,' - A lot','Percentage','888933043131.csv'
-181,'Shortage or inadequacy of computers for instruction - Not at all','Percentage','888933043131.csv'
-182,' - Very little','Percentage','888933043131.csv'
-183,' - To some extent','Percentage','888933043131.csv'
-184,' - A lot','Percentage','888933043131.csv'
-185,'Insufficient internet access - Not at all','Percentage','888933043131.csv'
-186,' - Very little','Percentage','888933043131.csv'
-187,' - To some extent','Percentage','888933043131.csv'
-188,' - A lot','Percentage','888933043131.csv'
-189,'Shortage or inadequacy of computer software for instruction - Not at all','Percentage','888933043131.csv'
-190,' - Very little','Percentage','888933043131.csv'
-191,' - To some extent','Percentage','888933043131.csv'
-192,' - A lot','Percentage','888933043131.csv'
-193,'Shortage or inadequacy of library materials - Not at all','Percentage','888933043131.csv'
-194,' - Very little','Percentage','888933043131.csv'
-195,' - To some extent','Percentage','888933043131.csv'
-196,' - A lot','Percentage','888933043131.csv'
-197,'Shortage of support personnel - Not at all','Percentage','888933043131.csv'
-198,' - Very little','Percentage','888933043131.csv'
-199,' - To some extent','Percentage','888933043131.csv'
-200,' - A lot','Percentage','888933043131.csv'
-201,'Arriving late at school','Percentage','888933043150.csv'
-202,'Absenteeism','Percentage','888933043150.csv'
-203,'Cheating','Percentage','888933043150.csv'
-204,'Vandalism and theft','Percentage','888933043150.csv'
-205,'Intimidation or verbal abuse among students','Percentage','888933043150.csv'
-206,'Physical injury caused by violence among students','Percentage','888933043150.csv'
-207,'Intimidation or verbal abuse of teachers or staff','Percentage','888933043150.csv'
-208,'Use/possession of drugs and/or alcohol','Percentage','888933043150.csv'
-209,'Arriving late at school - Never','Percentage','888933043169.csv'
-210,' - Rarely','Percentage','888933043169.csv'
-211,' - Monthly','Percentage','888933043169.csv'
-212,' - Weekly','Percentage','888933043169.csv'
-213,' - Daily','Percentage','888933043169.csv'
-214,'Absenteeism - Never','Percentage','888933043169.csv'
-215,' - Rarely','Percentage','888933043169.csv'
-216,' - Monthly','Percentage','888933043169.csv'
-217,' - Weekly','Percentage','888933043169.csv'
-218,' - Daily','Percentage','888933043169.csv'
-219,'Cheating - Never','Percentage','888933043169.csv'
-220,' - Rarely','Percentage','888933043169.csv'
-221,' - Monthly','Percentage','888933043169.csv'
-222,' - Weekly','Percentage','888933043169.csv'
-223,' - Daily','Percentage','888933043169.csv'
-224,'Vandalism and theft - Never','Percentage','888933043169.csv'
-225,' - Rarely','Percentage','888933043169.csv'
-226,' - Monthly','Percentage','888933043169.csv'
-227,' - Weekly','Percentage','888933043169.csv'
-228,' - Daily','Percentage','888933043169.csv'
-229,'Intimidation or verbal abuse among students - Never','Percentage','888933043169.csv'
-230,' - Rarely','Percentage','888933043169.csv'
-231,' - Monthly','Percentage','888933043169.csv'
-232,' - Weekly','Percentage','888933043169.csv'
-233,' - Daily','Percentage','888933043169.csv'
-234,'Physical injury caused by violence among students - Never','Percentage','888933043169.csv'
-235,' - Rarely','Percentage','888933043169.csv'
-236,' - Monthly','Percentage','888933043169.csv'
-237,' - Weekly','Percentage','888933043169.csv'
-238,' - Daily','Percentage','888933043169.csv'
-239,'Intimidation or verbal abuse of teachers or staff - Never','Percentage','888933043169.csv'
-240,' - Rarely','Percentage','888933043169.csv'
-241,' - Monthly','Percentage','888933043169.csv'
-242,' - Weekly','Percentage','888933043169.csv'
-243,' - Daily','Percentage','888933043169.csv'
-244,'Use/possession of drugs and/or alcohol - Never','Percentage','888933043169.csv'
-245,' - Rarely','Percentage','888933043169.csv'
-246,' - Monthly','Percentage','888933043169.csv'
-247,' - Weekly','Percentage','888933043169.csv'
-248,' - Daily','Percentage','888933043169.csv'
-249,'Arriving late at school','Percentage','888933043188.csv'
-250,'Absenteeism','Percentage','888933043188.csv'
-251,'Discrimination','Percentage','888933043188.csv'
-252,'Arriving late at school - Never','Percentage','888933043207.csv'
-253,' - Rarely','Percentage','888933043207.csv'
-254,' - Monthly','Percentage','888933043207.csv'
-255,' - Weekly','Percentage','888933043207.csv'
-256,' - Daily','Percentage','888933043207.csv'
-257,'Absenteeism - Never','Percentage','888933043207.csv'
-258,' - Rarely','Percentage','888933043207.csv'
-259,' - Monthly','Percentage','888933043207.csv'
-260,' - Weekly','Percentage','888933043207.csv'
-261,' - Daily','Percentage','888933043207.csv'
-262,'Discrimination - Never','Percentage','888933043207.csv'
-263,' - Rarely','Percentage','888933043207.csv'
-264,' - Monthly','Percentage','888933043207.csv'
-265,' - Weekly','Percentage','888933043207.csv'
-266,' - Daily','Percentage','888933043207.csv'
-267,'Female - ','Percentage','888933043758.csv'
-268,'Mean age - ','Average','888933043758.csv'
-269,'Percentage of principals in each age group - Under 30 years','Percentage','888933043758.csv'
-270,' - 30-39 years','Percentage','888933043758.csv'
-271,' - 40-49 years','Percentage','888933043758.csv'
-272,' - 50-59 years','Percentage','888933043758.csv'
-273,' - 60 years or more','Percentage','888933043758.csv'
-274,'Highest level of formal education completed - Below ISCED level 5','Percentage','888933043834.csv'
-275,' - ISCED level 5B2','Percentage','888933043834.csv'
-276,' - ISCED level 5A','Percentage','888933043834.csv'
-277,' - ISCED level 6','Percentage','888933043834.csv'
-278,'School administration or principal training programme or course completed - Before taking up position as principal','Percentage','888933043929.csv'
-279,' - After taking up position as principal','Percentage','888933043929.csv'
-280,' - Before and after taking up position as principal','Percentage','888933043929.csv'
-281,' - Never','Percentage','888933043929.csv'
-282,'Teacher education or training programme completed - Before taking up position as principal','Percentage','888933043929.csv'
-283,' - After taking up position as principal','Percentage','888933043929.csv'
-284,' - Before and after taking up position as principal','Percentage','888933043929.csv'
-285,' - Never','Percentage','888933043929.csv'
-286,'Instructional leadership training or course completed - Before taking up position as principal','Percentage','888933043929.csv'
-287,' - After taking up position as principal','Percentage','888933043929.csv'
-288,' - Before and after taking up position as principal','Percentage','888933043929.csv'
-289,' - Never','Percentage','888933043929.csv'
-290,'Leadership training index - No leadership training in formal education (0)','Percentage','888933043948.csv'
-291,' - Weak leadership training in formal education (1)','Percentage','888933043948.csv'
-292,' - Average leadership training in formal education (2)','Percentage','888933043948.csv'
-293,' - Strong leadership training in formal education (3)','Percentage','888933043948.csv'
-294,'Missing prerequisites','Percentage','888933044062.csv'
-295,'Too expensive','Percentage','888933044062.csv'
-296,'Lack of employer support','Percentage','888933044062.csv'
-297,'Conflicts with work schedule','Percentage','888933044062.csv'
-298,'Conflicts with family responsibilities','Percentage','888933044062.csv'
-299,'No relevant opportunities available','Percentage','888933044062.csv'
-300,'No incentives','Percentage','888933044062.csv'
-301,'Missing prerequisites - Strongly disagree','Percentage','888933044081.csv'
-302,' - Disagree','Percentage','888933044081.csv'
-303,' - Agree','Percentage','888933044081.csv'
-304,' - Strongly agree','Percentage','888933044081.csv'
-305,'Too expensive - Strongly disagree','Percentage','888933044081.csv'
-306,' - Disagree','Percentage','888933044081.csv'
-307,' - Agree','Percentage','888933044081.csv'
-308,' - Strongly agree','Percentage','888933044081.csv'
-309,'Lack of employer support - Strongly disagree','Percentage','888933044081.csv'
-310,' - Disagree','Percentage','888933044081.csv'
-311,' - Agree','Percentage','888933044081.csv'
-312,' - Strongly agree','Percentage','888933044081.csv'
-313,'Conflicts with work schedule - Strongly disagree','Percentage','888933044081.csv'
-314,' - Disagree','Percentage','888933044081.csv'
-315,' - Agree','Percentage','888933044081.csv'
-316,' - Strongly agree','Percentage','888933044081.csv'
-317,'Conflicts with family responsibilities - Strongly disagree','Percentage','888933044081.csv'
-318,' - Disagree','Percentage','888933044081.csv'
-319,' - Agree','Percentage','888933044081.csv'
-320,' - Strongly agree','Percentage','888933044081.csv'
-321,'No relevant opportunities available - Strongly disagree','Percentage','888933044081.csv'
-322,' - Disagree','Percentage','888933044081.csv'
-323,' - Agree','Percentage','888933044081.csv'
-324,' - Strongly agree','Percentage','888933044081.csv'
-325,'No incentives - Strongly disagree','Percentage','888933044081.csv'
-326,' - Disagree','Percentage','888933044081.csv'
-327,' - Agree','Percentage','888933044081.csv'
-328,' - Strongly agree','Percentage','888933044081.csv'
+feature_number,feature,feature_type,in_file
+1,Female - ,Percentage,888933042333.csv
+2,Percentage of teachers in each age group - Under 25 years,Percentage,888933042333.csv
+3, - 25-29 years,Percentage,888933042333.csv
+4, - 30-39 years,Percentage,888933042333.csv
+5, - 40-49 years,Percentage,888933042333.csv
+6, - 50-59 years,Percentage,888933042333.csv
+7, - 60 years or more,Percentage,888933042333.csv
+8,Average age - ,Average,888933042333.csv
+9,Highest level of formal education completed - Below ISCED level 5,Percentage,888933042409.csv
+10, - ISCED level 5B2,Percentage,888933042409.csv
+11, - ISCED level 5A,Percentage,888933042409.csv
+12, - ISCED level 6,Percentage,888933042409.csv
+13,Completion of teacher education or training programme -  - ,Percentage,888933042485.csv
+14,Elements included in formal education and training - Content of the subject(s) being taught - For all subjects,Percentage,888933042485.csv
+15, -  - For some subjects,Percentage,888933042485.csv
+16, - Pedagogy of the subject(s) being taught - For all subjects,Percentage,888933042485.csv
+17, -  - For some subjects,Percentage,888933042485.csv
+18, - Practice in the subject(s) being taught - For all subjects,Percentage,888933042485.csv
+19, - For some subjects,Percentage,888933042485.csv
+20,Extent to which teachers feel prepared for the following elements in their teaching - Content of the subject(s) being taught - Not at all prepared,Percentage,888933042523.csv
+21, -  - Somewhat prepared,Percentage,888933042523.csv
+22, -  - Well prepared,Percentage,888933042523.csv
+23, -  - Very well prepared,Percentage,888933042523.csv
+24, - Pedagogy of the subject(s) being taught - Not at all prepared,Percentage,888933042523.csv
+25, -  - Somewhat prepared,Percentage,888933042523.csv
+26, -  - Well prepared,Percentage,888933042523.csv
+27, -  - Very well prepared,Percentage,888933042523.csv
+28, - Practice in the subject(s) being taught - Not at all prepared,Percentage,888933042523.csv
+29, - Somewhat prepared,Percentage,888933042523.csv
+30, - Well prepared,Percentage,888933042523.csv
+31, - Very well prepared,Percentage,888933042523.csv
+32,Years working as a teacher at this school - Less than 3 years,Percentage,888933042637.csv
+33, - 3-10 years,Percentage,888933042637.csv
+34, - 11-20 years,Percentage,888933042637.csv
+35, - More than 20 years,Percentage,888933042637.csv
+36,Years working as a teacher in total - Less than 3 years,Percentage,888933042637.csv
+37, - 3-10 years,Percentage,888933042637.csv
+38, - 11-20 years,Percentage,888933042637.csv
+39, - More than 20 years,Percentage,888933042637.csv
+40,Years working in other education roles - Less than 3 years,Percentage,888933042637.csv
+41, - 3-10 years,Percentage,888933042637.csv
+42, - 11-20 years,Percentage,888933042637.csv
+43, - More than 20 years,Percentage,888933042637.csv
+44,Years working in other jobs - Less than 3 years,Percentage,888933042637.csv
+45, - 3-10 years,Percentage,888933042637.csv
+46, - 11-20 years,Percentage,888933042637.csv
+47, - More than 20 years,Percentage,888933042637.csv
+48,Full time (more than 900f full-time hours) - ,Percentage,888933042656.csv
+49,Part time (710 900f full-time hours) - ,Percentage,888933042656.csv
+50,Part time (500 700f full-time hours) - ,Percentage,888933042656.csv
+51,Part time (less than 500f full-time hours) - ,Percentage,888933042656.csv
+52,Reason stated for working part time - Teacher chose to work part time,Percentage,888933042656.csv
+53, - There was no possibility to work full time,Percentage,888933042656.csv
+54,Permanently employed,Percentage,888933042694.csv
+55,Fixed-term contract: More than 1 school year,Percentage,888933042694.csv
+56,Fixed-term contract: 1 school year or less,Percentage,888933042694.csv
+57,Teachers working in schools with more than 100f students whose first language is different from the language of instruction3 - ,Percentage,888933042732.csv
+58,Teachers with 5 years teaching experience or less - Working in schools with more than 100f students whose first language is different from the language of instruction,Percentage,888933042732.csv
+59, - Working in schools with 100r less of students whose first language is different from the language of instruction,Percentage,888933042732.csv
+60,Teachers with more than 5 years teaching experience - Working in schools with more than 100f students whose first language is different from the language of instruction,Percentage,888933042732.csv
+61, - Working in schools with 100r less of students whose first language is different from the language of instruction,Percentage,888933042732.csv
+62,Teachers with a highest level of education of ISCED 5B or below4 5 - Working in schools with more than 100f students whose first language is different from the language of instruction,Percentage,888933042732.csv
+63, - Working in schools with 100r less of students whose first language is different from the language of instruction,Percentage,888933042732.csv
+64,Teachers with a highest level of education of ISCED 5A or above4 - Working in schools with more than 100f students whose first language is different from the language of instruction,Percentage,888933042732.csv
+65, - Working in schools with 100r less of students whose first language is different from the language of instruction,Percentage,888933042732.csv
+66,Check for below 5% - Teachers with 5 years teaching experience or less,,888933042732.csv
+67, - Teachers with more than 5 years teaching experience,,888933042732.csv
+68, - Teachers with a highest level of education of ISCED 5b or below3,,888933042732.csv
+69, - Teachers with a highest level of education of ISCED 5a or above,,888933042732.csv
+70,Teachers working in schools with more than 100f students with special needs - ,Percentage,888933042751.csv
+71,Teachers with 5 years teaching experience or less - Working in schools with more than 100f students with special needs4,Percentage,888933042751.csv
+72, - Working in schools with 100r less of students with special needs4,Percentage,888933042751.csv
+73,Teachers with more than 5 years teaching experience - Working in schools with more than 100f students with special needs,Percentage,888933042751.csv
+74, - Working in schools with 100r less of students with special needs,Percentage,888933042751.csv
+75,Teachers with a highest level of education of ISCED 5B or below - Working in schools with more than 100f students with special needs,Percentage,888933042751.csv
+76, - Working in schools with 100r less of students with special needs,Percentage,888933042751.csv
+77,Teachers with a highest level of education of ISCED 5A or above - Working in schools with more than 100f students with special needs,Percentage,888933042751.csv
+78, - Working in schools with 100r less of students with special needs,Percentage,888933042751.csv
+79,Check for below 5% - Teachers with 5 years teaching experience or less,,888933042751.csv
+80, - Teachers with more than 5 years teaching experience,,888933042751.csv
+81, - Teachers with a highest level of education of ISCED 5b or below,,888933042751.csv
+82, - Teachers with a highest level of education of ISCED 5a or above,,888933042751.csv
+83,Teachers working in schools with more than 300f students from socioeconomically disadvantaged homes3 4 - ,Percentage,888933042770.csv
+84,Teachers with 5 years teaching experience or less - Working in schools with more than 300f students from socioeconomically disadvantaged homes4,Percentage,888933042770.csv
+85, - Working in schools with 300r less of students from socioeconomically disadvantaged homes4,Percentage,888933042770.csv
+86,Teachers with more than 5 years teaching experience - Working in schools with more than 300f students from socioeconomically disadvantaged homes4,Percentage,888933042770.csv
+87, - Working in schools with 300r less of students from socioeconomically disadvantaged homes4,Percentage,888933042770.csv
+88,Teachers with a highest level of education of ISCED 5B or below5 6 - Working in schools with more than 300f students from socioeconomically disadvantaged homes4,Percentage,888933042770.csv
+89, - Working in schools with 300r less of students from socioeconomically disadvantaged homes4,Percentage,888933042770.csv
+90,Teachers with a highest level of education of ISCED 5A or above5 - Working in schools with more than 300f students from socioeconomically disadvantaged homes4,Percentage,888933042770.csv
+91, - Working in schools with 300r less of students from socioeconomically disadvantaged homes4,Percentage,888933042770.csv
+92,Check for below 5% - Teachers with 5 years teaching experience or less,,888933042770.csv
+93, - Teachers with more than 5 years teaching experience,,888933042770.csv
+94, - Teachers with a highest level of education of ISCED 5b or below3,,888933042770.csv
+95, - Teachers with a highest level of education of ISCED 5a or above,,888933042770.csv
+96,Schools with the following percentage of students whose first language is different from the language of instruction1 - None,Percentage,888933042827.csv
+97, - 10 10%,Percentage,888933042827.csv
+98, - 110 30%,Percentage,888933042827.csv
+99, - 310 60%,Percentage,888933042827.csv
+100, - More than 60%,Percentage,888933042827.csv
+101,Schools with the following percentage of students with special needs12 - None,Percentage,888933042827.csv
+102, - 10 10%,Percentage,888933042827.csv
+103, - 110 30%,Percentage,888933042827.csv
+104, - 310 60%,Percentage,888933042827.csv
+105, - More than 60%,Percentage,888933042827.csv
+106,Schools with the following percentage of students from socioeconomically disadvantaged homes13 - None,Percentage,888933042827.csv
+107, - 10 10%,Percentage,888933042827.csv
+108, - 110 30%,Percentage,888933042827.csv
+109, - 310 60%,Percentage,888933042827.csv
+110, - More than 60%,Percentage,888933042827.csv
+111,Teachers working in schools located in areas with 15 000 people or fewer - ,Percentage,888933042846.csv
+112,Within schools located in areas with 15 000 people or fewer - Teachers with 5 years teaching experience or less,Percentage,888933042846.csv
+113, - Teachers with more than 5 years teaching experience,Percentage,888933042846.csv
+114, - Teachers with a highest level of education of ISCED 5B or below,Percentage,888933042846.csv
+115, - Teachers with a highest level of education of ISCED 5A or above,Percentage,888933042846.csv
+116,Teachers working in schools located in areas with 15 000 to 100 000 people - ,Percentage,888933042846.csv
+117,Within schools located in areas with 15 000 to 100 000 people - Teachers with 5 years teaching experience or less,Percentage,888933042846.csv
+118, - Teachers with more than 5 years teaching experience,Percentage,888933042846.csv
+119, - Teachers with a highest level of education of ISCED 5B or below,Percentage,888933042846.csv
+120, - Teachers with a highest level of education of ISCED 5A or above,Percentage,888933042846.csv
+121,Teachers working in schools located in areas with more than 100 000 people - ,Percentage,888933042846.csv
+122,Within schools located in areas with more than 100 000 people - Teachers with 5 years teaching experience or less,Percentage,888933042846.csv
+123, - Teachers with more than 5 years teaching experience,Percentage,888933042846.csv
+124, - Teachers with a highest level of education of ISCED 5B or below,Percentage,888933042846.csv
+125, - Teachers with a highest level of education of ISCED 5A or above,Percentage,888933042846.csv
+126,Check for below 5% - Teachers with 5 years teaching experience or less,,888933042846.csv
+127, - Teachers with more than 5 years teaching experience,,888933042846.csv
+128, - Teachers with a highest level of education of ISCED 5b or below,,888933042846.csv
+129, - Teachers with a highest level of education of ISCED 5a or above,,888933042846.csv
+130,Hamlet or rural area (1 000 people or fewer),Percentage,888933042903.csv
+131,Village (1 001 to 3 000 people),Percentage,888933042903.csv
+132,Small town (3 001 to 15 000 people),Percentage,888933042903.csv
+133,Town (15 001 to 100 000 people),Percentage,888933042903.csv
+134,City (100 001 to 1 000 000 people),Percentage,888933042903.csv
+135,Large city (more than 1 000 000 people),Percentage,888933042903.csv
+136,Currently teaching reading writing and literature3 - ,Percentage,888933042941.csv
+137,Of whom received the following types of formal education or training in this subject category - ISCED level 4 or 5B for this subject category,Percentage,888933042941.csv
+138, - ISCED level 5A or above for this subject category,Percentage,888933042941.csv
+139, - Subject specialisation as part of the teacher training,Percentage,888933042941.csv
+140, - In-service or professional development stage,Percentage,888933042941.csv
+141, - No formal education or training at ISCED level 4 or higher or at the professional development stage for this subject category13,Percentage,888933042941.csv
+142,Currently teaching mathematics4 - ,Percentage,888933042941.csv
+143,Of whom received the following types of formal education or training in this subject category - ISCED level 4 or 5B for this subject category,Percentage,888933042941.csv
+144, - ISCED level 5A or above for this subject category,Percentage,888933042941.csv
+145, - Subject specialisation as part of the teacher training,Percentage,888933042941.csv
+146, - In-service or professional development stage,Percentage,888933042941.csv
+147, - No formal education or training at ISCED level 4 or higher or at the professional development stage for this subject category13,Percentage,888933042941.csv
+148,Currently teaching science5 - ,Percentage,888933042941.csv
+149,Of whom received the following types of formal education or training in this subject category - ISCED level 4 or 5B for this subject category,Percentage,888933042941.csv
+150, - ISCED level 5A or above for this subject category,Percentage,888933042941.csv
+151, - Subject specialisation as part of the teacher training,Percentage,888933042941.csv
+152, - In-service or professional development stage,Percentage,888933042941.csv
+153, - No formal education or training at ISCED level 4 or higher or at the professional development stage for this subject category13,Percentage,888933042941.csv
+154,Currently teaching social studies6 - ,Percentage,888933042941.csv
+155,Of whom received the following types of formal education or training in this subject category - ISCED level 4 or 5B for this subject category,Percentage,888933042941.csv
+156, - ISCED level 5A or above for this subject category,Percentage,888933042941.csv
+157, - Subject specialisation as part of the teacher training,Percentage,888933042941.csv
+158, - In-service or professional development stage,Percentage,888933042941.csv
+159, - No formal education or training at ISCED level 4 or higher or at the professional development stage for this subject category13,Percentage,888933042941.csv
+160,Currently teaching modern foreign languages7 - ,Percentage,888933042941.csv
+161,Of whom received the following types of formal education or training in this subject category - ISCED level 4 or 5B for this subject category,Percentage,888933042941.csv
+162, - ISCED level 5A or above for this subject category,Percentage,888933042941.csv
+163, - Subject specialisation as part of the teacher training,Percentage,888933042941.csv
+164, - In-service or professional development stage,Percentage,888933042941.csv
+165, - No formal education or training at ISCED level 4 or higher or at the professional development stage for this subject category13,Percentage,888933042941.csv
+166,Currently teaching ancient Greek and/or Latin - ,Percentage,888933042941.csv
+167,Of whom received the following types of formal education or training in this subject category - ISCED level 4 or 5B for this subject category,Percentage,888933042941.csv
+168, - ISCED level 5A or above for this subject category,Percentage,888933042941.csv
+169, - Subject specialisation as part of the teacher training,Percentage,888933042941.csv
+170, - In-service or professional development stage,Percentage,888933042941.csv
+171, - No formal education or training at ISCED level 4 or higher or at the professional development stage for this subject category13,Percentage,888933042941.csv
+172,Currently teaching technology8 - ,Percentage,888933042941.csv
+173,Of whom received the following types of formal education or training in this subject category - ISCED level 4 or 5B for this subject category,Percentage,888933042941.csv
+174, - ISCED level 5A or above for this subject category,Percentage,888933042941.csv
+175, - Subject specialisation as part of the teacher training,Percentage,888933042941.csv
+176, - In-service or professional development stage,Percentage,888933042941.csv
+177, - No formal education or training at ISCED level 4 or higher or at the professional development stage for this subject category13,Percentage,888933042941.csv
+178,Currently teaching arts9 - ,Percentage,888933042941.csv
+179,Of whom received the following types of formal education or training in this subject category - ISCED level 4 or 5B for this subject category,Percentage,888933042941.csv
+180, - ISCED level 5A or above for this subject category,Percentage,888933042941.csv
+181, - Subject specialisation as part of the teacher training,Percentage,888933042941.csv
+182, - In-service or professional development stage,Percentage,888933042941.csv
+183, - No formal education or training at ISCED level 4 or higher or at the professional development stage for this subject category13,Percentage,888933042941.csv
+184,Currently teaching physical education10 - ,Percentage,888933042941.csv
+185,Of whom received the following types of formal education or training in this subject category - ISCED level 4 or 5B for this subject category,Percentage,888933042941.csv
+186, - ISCED level 5A or above for this subject category,Percentage,888933042941.csv
+187, - Subject specialisation as part of the teacher training,Percentage,888933042941.csv
+188, - In-service or professional development stage,Percentage,888933042941.csv
+189, - No formal education or training at ISCED level 4 or higher or at the professional development stage for this subject category13,Percentage,888933042941.csv
+190,Currently teaching religion and/or ethics11 - ,Percentage,888933042941.csv
+191,Of whom received the following types of formal education or training in this subject category - ISCED level 4 or 5B for this subject category,Percentage,888933042941.csv
+192, - ISCED level 5A or above for this subject category,Percentage,888933042941.csv
+193, - Subject specialisation as part of the teacher training,Percentage,888933042941.csv
+194, - In-service or professional development stage,Percentage,888933042941.csv
+195, - No formal education or training at ISCED level 4 or higher or at the professional development stage for this subject category13,Percentage,888933042941.csv
+196,Currently teaching practical and vocational skills12 - ,Percentage,888933042941.csv
+197,Of whom received the following types of formal education or training in this subject category - ISCED level 4 or 5B for this subject category,Percentage,888933042941.csv
+198, - ISCED level 5A or above for this subject category,Percentage,888933042941.csv
+199, - Subject specialisation as part of the teacher training,Percentage,888933042941.csv
+200, - In-service or professional development stage,Percentage,888933042941.csv
+201, - No formal education or training at ISCED level 4 or higher or at the professional development stage for this subject category13,Percentage,888933042941.csv
+202,Public schools1 - ,Percentage,888933042998.csv
+203,Private schools2 - ,Percentage,888933042998.csv
+204,Schools that compete with two or more other schools for at least some of their students - ,Percentage,888933042998.csv
+205,Schools that compete with one other school for at least some of their students - ,Percentage,888933042998.csv
+206,Schools that do not compete with other schools for their students - ,Percentage,888933042998.csv
+207,Number of students in schools1,Average,888933043055.csv
+208,Number of teachers in schools1,Average,888933043055.csv
+209,Ratio of students to number of teachers2,Average,888933043055.csv
+210,Ratio of teachers to number of personnel for pedagogical support,Average,888933043055.csv
+211,Ratio of teachers to number of school administrative or management personnel,Average,888933043055.csv
+212,Average class size3,Average,888933043055.csv
+213,Note: The statistical data for Israel are supplied by and under the responsibility of the relevant Israeli authorities. The use of such data by the OECD is without prejudice to the status of the Golan Heights East Jerusalem and Israeli settlements in the West Bank under the terms of international law.,,888933043055.csv
+214,Shortage of qualified and/or well-performing teachers,Percentage,888933043112.csv
+215,Shortage of teachers with competences in teaching students with special needs,Percentage,888933043112.csv
+216,Shortage of vocational teachers,Percentage,888933043112.csv
+217,Shortage or inadequacy of instructional materials,Percentage,888933043112.csv
+218,Shortage or inadequacy of computers for instruction,Percentage,888933043112.csv
+219,Insufficient internet access,Percentage,888933043112.csv
+220,Shortage or inadequacy of computer software for instruction,Percentage,888933043112.csv
+221,Shortage or inadequacy of library materials,Percentage,888933043112.csv
+222,Shortage of support personnel,Percentage,888933043112.csv
+223,Shortage of qualified and/or well-performing teachers - Not at all,Percentage,888933043131.csv
+224, - Very little,Percentage,888933043131.csv
+225, - To some extent,Percentage,888933043131.csv
+226, - A lot,Percentage,888933043131.csv
+227,Shortage of teachers with competences in teaching students with special needs - Not at all,Percentage,888933043131.csv
+228, - Very little,Percentage,888933043131.csv
+229, - To some extent,Percentage,888933043131.csv
+230, - A lot,Percentage,888933043131.csv
+231,Shortage of vocational teachers - Not at all,Percentage,888933043131.csv
+232, - Very little,Percentage,888933043131.csv
+233, - To some extent,Percentage,888933043131.csv
+234, - A lot,Percentage,888933043131.csv
+235,Shortage or inadequacy of instructional materials - Not at all,Percentage,888933043131.csv
+236, - Very little,Percentage,888933043131.csv
+237, - To some extent,Percentage,888933043131.csv
+238, - A lot,Percentage,888933043131.csv
+239,Shortage or inadequacy of computers for instruction - Not at all,Percentage,888933043131.csv
+240, - Very little,Percentage,888933043131.csv
+241, - To some extent,Percentage,888933043131.csv
+242, - A lot,Percentage,888933043131.csv
+243,Insufficient internet access - Not at all,Percentage,888933043131.csv
+244, - Very little,Percentage,888933043131.csv
+245, - To some extent,Percentage,888933043131.csv
+246, - A lot,Percentage,888933043131.csv
+247,Shortage or inadequacy of computer software for instruction - Not at all,Percentage,888933043131.csv
+248, - Very little,Percentage,888933043131.csv
+249, - To some extent,Percentage,888933043131.csv
+250, - A lot,Percentage,888933043131.csv
+251,Shortage or inadequacy of library materials - Not at all,Percentage,888933043131.csv
+252, - Very little,Percentage,888933043131.csv
+253, - To some extent,Percentage,888933043131.csv
+254, - A lot,Percentage,888933043131.csv
+255,Shortage of support personnel - Not at all,Percentage,888933043131.csv
+256, - Very little,Percentage,888933043131.csv
+257, - To some extent,Percentage,888933043131.csv
+258, - A lot,Percentage,888933043131.csv
+259,Arriving late at school,Percentage,888933043150.csv
+260,Absenteeism,Percentage,888933043150.csv
+261,Cheating,Percentage,888933043150.csv
+262,Vandalism and theft,Percentage,888933043150.csv
+263,Intimidation or verbal abuse among students,Percentage,888933043150.csv
+264,Physical injury caused by violence among students,Percentage,888933043150.csv
+265,Intimidation or verbal abuse of teachers or staff,Percentage,888933043150.csv
+266,Use/possession of drugs and/or alcohol,Percentage,888933043150.csv
+267,Arriving late at school,Percentage,888933043188.csv
+268,Absenteeism,Percentage,888933043188.csv
+269,Discrimination,Percentage,888933043188.csv
+270,The school staff share a common set of beliefs about schooling/learning,Percentage,888933043226.csv
+271,There is a high level of co-operation between the school and the local community,Percentage,888933043226.csv
+272,School staff have an open discussion about difficulties,Percentage,888933043226.csv
+273,There is mutual respect for colleagues' ideas,Percentage,888933043226.csv
+274,There is a culture of sharing success,Percentage,888933043226.csv
+275,Teachers who report that the following statements apply - In this school teachers and students usually get on well with each other - Strongly disagree,Percentage,888933043302.csv
+276, -  - Disagree,Percentage,888933043302.csv
+277, -  - Agree,Percentage,888933043302.csv
+278, -  - Strongly agree,Percentage,888933043302.csv
+279,Teachers who report that the following statements apply - Most teachers in this school believe that the students' well-being is important - Strongly disagree,Percentage,888933043302.csv
+280, -  - Disagree,Percentage,888933043302.csv
+281, -  - Agree,Percentage,888933043302.csv
+282, -  - Strongly agree,Percentage,888933043302.csv
+283,Teachers who report that the following statements apply - Most teachers in this school are interested in what students have to say - Strongly disagree,Percentage,888933043302.csv
+284, -  - Disagree,Percentage,888933043302.csv
+285, -  - Agree,Percentage,888933043302.csv
+286, -  - Strongly agree,Percentage,888933043302.csv
+287,Teachers who report that the following statements apply - If a student from this school needs extra assistance the school provides it - Strongly disagree,Percentage,888933043302.csv
+288, -  - Disagree,Percentage,888933043302.csv
+289, -  - Agree,Percentage,888933043302.csv
+290, -  - Strongly agree,Percentage,888933043302.csv
+291,Principals who report that the following statements apply - The relationships between teachers and students are good - Strongly disagree,Percentage,888933043302.csv
+292, - Disagree,Percentage,888933043302.csv
+293, - Agree,Percentage,888933043302.csv
+294, - Strongly agree,Percentage,888933043302.csv
+295,Appointing or hiring teachers - The principal,Percentage,888933043340.csv
+296, - Other members of the school management team,Percentage,888933043340.csv
+297, - Teachers (not as part of the school management team),Percentage,888933043340.csv
+298, - School governing board,Percentage,888933043340.csv
+299, - Local municipality/regional state or national/federal authority,Percentage,888933043340.csv
+300,Dismissing or suspending teachers from employment - The principal,Percentage,888933043340.csv
+301, - Other members of the school management team,Percentage,888933043340.csv
+302, - Teachers (not as part of the school management team),Percentage,888933043340.csv
+303, - School governing board,Percentage,888933043340.csv
+304, - Local municipality/regional state or national/federal authority,Percentage,888933043340.csv
+305,Establishing teachers' starting salaries including setting pay scales - The principal,Percentage,888933043340.csv
+306, - Other members of the school management team,Percentage,888933043340.csv
+307, - Teachers (not as part of the school management team),Percentage,888933043340.csv
+308, - School governing board,Percentage,888933043340.csv
+309, - Local municipality/regional state or national/federal authority,Percentage,888933043340.csv
+310,Determining teachers' salary increases - The principal,Percentage,888933043340.csv
+311, - Other members of the school management team,Percentage,888933043340.csv
+312, - Teachers (not as part of the school management team),Percentage,888933043340.csv
+313, - School governing board,Percentage,888933043340.csv
+314, - Local municipality/regional state or national/federal authority,Percentage,888933043340.csv
+315,Deciding on budget allocations within the school - The principal,Percentage,888933043340.csv
+316, - Other members of the school management team,Percentage,888933043340.csv
+317, - Teachers (not as part of the school management team),Percentage,888933043340.csv
+318, - School governing board,Percentage,888933043340.csv
+319, - Local municipality/regional state or national/federal authority,Percentage,888933043340.csv
+320,Establishing student disciplinary policies and procedures - The principal,Percentage,888933043340.csv
+321, - Other members of the school management team,Percentage,888933043340.csv
+322, - Teachers (not as part of the school management team),Percentage,888933043340.csv
+323, - School governing board,Percentage,888933043340.csv
+324, - Local municipality/regional state or national/federal authority,Percentage,888933043340.csv
+325,Establishing student assessment policies including national/regional assessments - The principal,Percentage,888933043340.csv
+326, - Other members of the school management team,Percentage,888933043340.csv
+327, - Teachers (not as part of the school management team),Percentage,888933043340.csv
+328, - School governing board,Percentage,888933043340.csv
+329, - Local municipality/regional state or national/federal authority,Percentage,888933043340.csv
+330,Approving students for admission to the school - The principal,Percentage,888933043340.csv
+331, - Other members of the school management team,Percentage,888933043340.csv
+332, - Teachers (not as part of the school management team),Percentage,888933043340.csv
+333, - School governing board,Percentage,888933043340.csv
+334, - Local municipality/regional state or national/federal authority,Percentage,888933043340.csv
+335,Choosing which learning materials are used - The principal,Percentage,888933043340.csv
+336, - Other members of the school management team,Percentage,888933043340.csv
+337, - Teachers (not as part of the school management team),Percentage,888933043340.csv
+338, - School governing board,Percentage,888933043340.csv
+339, - Local municipality/regional state or national/federal authority,Percentage,888933043340.csv
+340,Determining course content including national/regional curricula - The principal,Percentage,888933043340.csv
+341, - Other members of the school management team,Percentage,888933043340.csv
+342, - Teachers (not as part of the school management team),Percentage,888933043340.csv
+343, - School governing board,Percentage,888933043340.csv
+344, - Local municipality/regional state or national/federal authority,Percentage,888933043340.csv
+345,Deciding which courses are offered - The principal,Percentage,888933043340.csv
+346, - Other members of the school management team,Percentage,888933043340.csv
+347, - Teachers (not as part of the school management team),Percentage,888933043340.csv
+348, - School governing board,Percentage,888933043340.csv
+349, - Local municipality/regional state or national/federal authority,Percentage,888933043340.csv
+350,Administrative and leadership tasks and meetings1,Average,888933043359.csv
+351,Curriculum and teaching-related tasks and meetings2,Average,888933043359.csv
+352,Student interactions3,Average,888933043359.csv
+353,Parents or guardian interactions4,Average,888933043359.csv
+354,Interactions with local and regional community business and industry,Average,888933043359.csv
+355,Other,Average,888933043359.csv
+356,Collaborate with teachers to solve classroom discipline problems - Never or rarely,Percentage,888933043435.csv
+357, - Sometimes,Percentage,888933043435.csv
+358, - Often,Percentage,888933043435.csv
+359, - Very often,Percentage,888933043435.csv
+360,Observe instruction in the classroom - Never or rarely,Percentage,888933043435.csv
+361, - Sometimes,Percentage,888933043435.csv
+362, - Often,Percentage,888933043435.csv
+363, - Very often,Percentage,888933043435.csv
+364,Take action to support co-operation among teachers to develop new teaching practices - Never or rarely,Percentage,888933043435.csv
+365, - Sometimes,Percentage,888933043435.csv
+366, - Often,Percentage,888933043435.csv
+367, - Very often,Percentage,888933043435.csv
+368,Take action to ensure that teachers take responsibility for improving their teaching skills - Never or rarely,Percentage,888933043435.csv
+369, - Sometimes,Percentage,888933043435.csv
+370, - Often,Percentage,888933043435.csv
+371, - Very often,Percentage,888933043435.csv
+372,Take action to ensure that teachers feel responsible for their students' learning outcomes - Never or rarely,Percentage,888933043435.csv
+373, - Sometimes,Percentage,888933043435.csv
+374, - Often,Percentage,888933043435.csv
+375, - Very often,Percentage,888933043435.csv
+376,Provide parents or guardians with information on the school and student performance - Never or rarely,Percentage,888933043435.csv
+377, - Sometimes,Percentage,888933043435.csv
+378, - Often,Percentage,888933043435.csv
+379, - Very often,Percentage,888933043435.csv
+380,Check for mistakes and errors in school administrative procedures and reports - Never or rarely,Percentage,888933043435.csv
+381, - Sometimes,Percentage,888933043435.csv
+382, - Often,Percentage,888933043435.csv
+383, - Very often,Percentage,888933043435.csv
+384,Resolve problems with the lesson timetable in the school - Never or rarely,Percentage,888933043435.csv
+385, - Sometimes,Percentage,888933043435.csv
+386, - Often,Percentage,888933043435.csv
+387, - Very often,Percentage,888933043435.csv
+388,Collaborate with principals from other schools - Never or rarely,Percentage,888933043435.csv
+389, - Sometimes,Percentage,888933043435.csv
+390, - Often,Percentage,888933043435.csv
+391, - Very often,Percentage,888933043435.csv
+392,Used student performance and student evaluation results (including national/international assessments) to develop the school's educational goals and programmes,Percentage,888933043530.csv
+393,Worked on a professional development plan for the school,Percentage,888933043530.csv
+394,Appointing or hiring teachers - Principal,Percentage,888933043606.csv
+395, - Other members of the school management team,Percentage,888933043606.csv
+396, - Teachers (not as part of the school management team),Percentage,888933043606.csv
+397, - School governing boards,Percentage,888933043606.csv
+398, - Local municipality/regional state or national/federal authority,Percentage,888933043606.csv
+399,Dismissing or suspending teachers from employment - Principal,Percentage,888933043606.csv
+400, - Other members of the school management team,Percentage,888933043606.csv
+401, - Teachers (not as part of the school management team),Percentage,888933043606.csv
+402, - School governing boards,Percentage,888933043606.csv
+403, - Local municipality/regional state or national/federal authority,Percentage,888933043606.csv
+404,Establishing teachers' starting salaries including setting payscales - Principal,Percentage,888933043606.csv
+405, - Other members of the school management team,Percentage,888933043606.csv
+406, - Teachers (not as part of the school management team),Percentage,888933043606.csv
+407, - School governing boards,Percentage,888933043606.csv
+408, - Local municipality/regional state or national/federal authority,Percentage,888933043606.csv
+409,Determining teachers' salary increases - Principal,Percentage,888933043606.csv
+410, - Other members of the school management team,Percentage,888933043606.csv
+411, - Teachers (not as part of the school management team),Percentage,888933043606.csv
+412, - School governing boards,Percentage,888933043606.csv
+413, - Local municipality/regional state or national/federal authority,Percentage,888933043606.csv
+414,Deciding on budget allocations within the school - Principal,Percentage,888933043606.csv
+415, - Other members of the school management team,Percentage,888933043606.csv
+416, - Teachers (not as part of the school management team),Percentage,888933043606.csv
+417, - School governing boards,Percentage,888933043606.csv
+418, - Local municipality/regional state or national/federal authority,Percentage,888933043606.csv
+419,Establishing student disciplinary policies and procedures - Principal,Percentage,888933043606.csv
+420, - Other members of the school management team,Percentage,888933043606.csv
+421, - Teachers (not as part of the school management team),Percentage,888933043606.csv
+422, - School governing boards,Percentage,888933043606.csv
+423, - Local municipality/regional state or national/federal authority,Percentage,888933043606.csv
+424,Establishing student assessment policies including national/regional assessments - Principal,Percentage,888933043606.csv
+425, - Other members of the school management team,Percentage,888933043606.csv
+426, - Teachers (not as part of the school management team),Percentage,888933043606.csv
+427, - School governing boards,Percentage,888933043606.csv
+428, - Local municipality/regional state or national/federal authority,Percentage,888933043606.csv
+429,Approving students for admission to the school - Principal,Percentage,888933043606.csv
+430, - Other members of the school management team,Percentage,888933043606.csv
+431, - Teachers (not as part of the school management team),Percentage,888933043606.csv
+432, - School governing boards,Percentage,888933043606.csv
+433, - Local municipality/regional state or national/federal authority,Percentage,888933043606.csv
+434,Choosing which learning materials are used - Principal,Percentage,888933043606.csv
+435, - Other members of the school management team,Percentage,888933043606.csv
+436, - Teachers (not as part of the school management team),Percentage,888933043606.csv
+437, - School governing boards,Percentage,888933043606.csv
+438, - Local municipality/regional state or national/federal authority,Percentage,888933043606.csv
+439,Determining course content including national/regional curricula - Principal,Percentage,888933043606.csv
+440, - Other members of the school management team,Percentage,888933043606.csv
+441, - Teachers (not as part of the school management team),Percentage,888933043606.csv
+442, - School governing boards,Percentage,888933043606.csv
+443, - Local municipality/regional state or national/federal authority,Percentage,888933043606.csv
+444,Deciding which courses are offered - Principal,Percentage,888933043606.csv
+445, - Other members of the school management team,Percentage,888933043606.csv
+446, - Teachers (not as part of the school management team),Percentage,888933043606.csv
+447, - School governing boards,Percentage,888933043606.csv
+448, - Local municipality/regional state or national/federal authority,Percentage,888933043606.csv
+449,Female - ,Percentage,888933043739.csv
+450,Mean age - ,Average,888933043739.csv
+451,Percentage of principals in each age group - Under 30 years,Percentage,888933043739.csv
+452, - 30-39 years,Percentage,888933043739.csv
+453, - 40-49 years,Percentage,888933043739.csv
+454, - 50-59 years,Percentage,888933043739.csv
+455, - 60 years or more,Percentage,888933043739.csv
+456,Highest level of formal education completed - Below ISCED level 5,Percentage,888933043815.csv
+457, - ISCED level 5B2,Percentage,888933043815.csv
+458, - ISCED level 5A,Percentage,888933043815.csv
+459, - ISCED level 6,Percentage,888933043815.csv
+460,School administration or principal training programme or course - Before taking up position as principal,Percentage,888933043891.csv
+461, - After taking up position as principal,Percentage,888933043891.csv
+462, - Before and after taking up position as principal,Percentage,888933043891.csv
+463, - Never,Percentage,888933043891.csv
+464,Teacher training/education programme or course - Before taking up position as principal,Percentage,888933043891.csv
+465, - After taking up position as principal,Percentage,888933043891.csv
+466, - Before and after taking up position as principal,Percentage,888933043891.csv
+467, - Never,Percentage,888933043891.csv
+468,Instructional leadership training or course - Before taking up position as principal,Percentage,888933043891.csv
+469, - After taking up position as principal,Percentage,888933043891.csv
+470, - Before and after taking up position as principal,Percentage,888933043891.csv
+471, - Never,Percentage,888933043891.csv
+472,Years working as a principal - Average years of experience,Average,888933043967.csv
+473, - Less than 3 years experience,Percentage,888933043967.csv
+474, - 3-10 years experience,Percentage,888933043967.csv
+475, - 11-20 years experience,Percentage,888933043967.csv
+476, - More than 20 years experience,Percentage,888933043967.csv
+477,Years working in other school management roles - Average years of experience,Average,888933043967.csv
+478, - Less than 3 years experience,Percentage,888933043967.csv
+479, - 3-10 years experience,Percentage,888933043967.csv
+480, - 11-20 years experience,Percentage,888933043967.csv
+481, - More than 20 years experience,Percentage,888933043967.csv
+482,Years working as a teacher - Average years of experience,Average,888933043967.csv
+483, - Less than 3 years experience,Percentage,888933043967.csv
+484, - 3-10 years experience,Percentage,888933043967.csv
+485, - 11-20 years experience,Percentage,888933043967.csv
+486, - More than 20 years experience,Percentage,888933043967.csv
+487,Years working in other jobs - Average years of experience,Average,888933043967.csv
+488, - Less than 3 years experience,Percentage,888933043967.csv
+489, - 3-10 years experience,Percentage,888933043967.csv
+490, - 11-20 years experience,Percentage,888933043967.csv
+491, - More than 20 years experience,Percentage,888933043967.csv
+492,Full time without teaching obligations1,Percentage,888933044024.csv
+493,Full time with teaching obligations1,Percentage,888933044024.csv
+494,Part time without teaching obligations2,Percentage,888933044024.csv
+495,Part time with teaching obligations2,Percentage,888933044024.csv
+496,Percentage of principals who did not participate in any professional development3,Percentage,888933044043.csv
+497,Percentage of principals who participated in a professional network mentoring or research activity,Percentage,888933044043.csv
+498,Average number of days among those who participated,Average,888933044043.csv
+499,Percentage of principals who participated in courses conferences or observation visits,Percentage,888933044043.csv
+500,Average number of days among those who participated,Average,888933044043.csv
+501,Percentage of principals who participated in other types of professional development activities,Percentage,888933044043.csv
+502,Average number of days among those who participated,Average,888933044043.csv
+503,Missing prerequisites - Strongly disagree,Percentage,888933044081.csv
+504, - Disagree,Percentage,888933044081.csv
+505, - Agree,Percentage,888933044081.csv
+506, - Strongly agree,Percentage,888933044081.csv
+507,Too expensive - Strongly disagree,Percentage,888933044081.csv
+508, - Disagree,Percentage,888933044081.csv
+509, - Agree,Percentage,888933044081.csv
+510, - Strongly agree,Percentage,888933044081.csv
+511,Lack of employer support - Strongly disagree,Percentage,888933044081.csv
+512, - Disagree,Percentage,888933044081.csv
+513, - Agree,Percentage,888933044081.csv
+514, - Strongly agree,Percentage,888933044081.csv
+515,Conflicts with work schedule - Strongly disagree,Percentage,888933044081.csv
+516, - Disagree,Percentage,888933044081.csv
+517, - Agree,Percentage,888933044081.csv
+518, - Strongly agree,Percentage,888933044081.csv
+519,Conflicts with family responsibilities - Strongly disagree,Percentage,888933044081.csv
+520, - Disagree,Percentage,888933044081.csv
+521, - Agree,Percentage,888933044081.csv
+522, - Strongly agree,Percentage,888933044081.csv
+523,No relevant opportunities available - Strongly disagree,Percentage,888933044081.csv
+524, - Disagree,Percentage,888933044081.csv
+525, - Agree,Percentage,888933044081.csv
+526, - Strongly agree,Percentage,888933044081.csv
+527,No incentives - Strongly disagree,Percentage,888933044081.csv
+528, - Disagree,Percentage,888933044081.csv
+529, - Agree,Percentage,888933044081.csv
+530, - Strongly agree,Percentage,888933044081.csv
+531,Inadequate school budget and resources - Not at all,Percentage,888933044461.csv
+532, - Very little,Percentage,888933044461.csv
+533, - To some extent,Percentage,888933044461.csv
+534, - A lot,Percentage,888933044461.csv
+535,Government regulation and policy - Not at all,Percentage,888933044461.csv
+536, - Very little,Percentage,888933044461.csv
+537, - To some extent,Percentage,888933044461.csv
+538, - A lot,Percentage,888933044461.csv
+539,Teachers' absences - Not at all,Percentage,888933044461.csv
+540, - Very little,Percentage,888933044461.csv
+541, - To some extent,Percentage,888933044461.csv
+542, - A lot,Percentage,888933044461.csv
+543,Lack of parent or guardian involvement and support - Not at all,Percentage,888933044461.csv
+544, - Very little,Percentage,888933044461.csv
+545, - To some extent,Percentage,888933044461.csv
+546, - A lot,Percentage,888933044461.csv
+547,Teachers' career-based wage system1 - Not at all,Percentage,888933044461.csv
+548, - Very little,Percentage,888933044461.csv
+549, - To some extent,Percentage,888933044461.csv
+550, - A lot,Percentage,888933044461.csv
+551,Lack of opportunities and support for principal's professional development - Not at all,Percentage,888933044461.csv
+552, - Very little,Percentage,888933044461.csv
+553, - To some extent,Percentage,888933044461.csv
+554, - A lot,Percentage,888933044461.csv
+555,Lack of opportunities and support for teachers' professional development - Not at all,Percentage,888933044461.csv
+556, - Very little,Percentage,888933044461.csv
+557, - To some extent,Percentage,888933044461.csv
+558, - A lot,Percentage,888933044461.csv
+559,High workload and level of responsibilities in the principal's job - Not at all,Percentage,888933044461.csv
+560, - Very little,Percentage,888933044461.csv
+561, - To some extent,Percentage,888933044461.csv
+562, - A lot,Percentage,888933044461.csv
+563,Lack of shared leadership with other school staff members - Not at all,Percentage,888933044461.csv
+564, - Very little,Percentage,888933044461.csv
+565, - To some extent,Percentage,888933044461.csv
+566, - A lot,Percentage,888933044461.csv
+567,The advantages of the profession clearly outweigh the disadvantages - Strongly disagree,Percentage,888933044480.csv
+568, - Disagree,Percentage,888933044480.csv
+569, - Agree,Percentage,888933044480.csv
+570, - Strongly agree,Percentage,888933044480.csv
+571,If I could decide again I would still choose this job/position - Strongly disagree,Percentage,888933044480.csv
+572, - Disagree,Percentage,888933044480.csv
+573, - Agree,Percentage,888933044480.csv
+574, - Strongly agree,Percentage,888933044480.csv
+575,I would like to change to another school if that were possible - Strongly disagree,Percentage,888933044480.csv
+576, - Disagree,Percentage,888933044480.csv
+577, - Agree,Percentage,888933044480.csv
+578, - Strongly agree,Percentage,888933044480.csv
+579,I regret that I decided to become a principal - Strongly disagree,Percentage,888933044480.csv
+580, - Disagree,Percentage,888933044480.csv
+581, - Agree,Percentage,888933044480.csv
+582, - Strongly agree,Percentage,888933044480.csv
+583,I enjoy working at this school - Strongly disagree,Percentage,888933044480.csv
+584, - Disagree,Percentage,888933044480.csv
+585, - Agree,Percentage,888933044480.csv
+586, - Strongly agree,Percentage,888933044480.csv
+587,I would recommend my school as a good place to work - Strongly disagree,Percentage,888933044480.csv
+588, - Disagree,Percentage,888933044480.csv
+589, - Agree,Percentage,888933044480.csv
+590, - Strongly agree,Percentage,888933044480.csv
+591,I think that the teaching profession is valued in society - Strongly disagree,Percentage,888933044480.csv
+592, - Disagree,Percentage,888933044480.csv
+593, - Agree,Percentage,888933044480.csv
+594, - Strongly agree,Percentage,888933044480.csv
+595,I am satisfied with my performance in this school - Strongly disagree,Percentage,888933044480.csv
+596, - Disagree,Percentage,888933044480.csv
+597, - Agree,Percentage,888933044480.csv
+598, - Strongly agree,Percentage,888933044480.csv
+599,All in all I am satisfied with my job - Strongly disagree,Percentage,888933044480.csv
+600, - Disagree,Percentage,888933044480.csv
+601, - Agree,Percentage,888933044480.csv
+602, - Strongly agree,Percentage,888933044480.csv
+603,Principals working in schools located in areas with 15 000 people or less - ,Percentage,888933044556.csv
+604,Within schools located in areas with 15 000 people or less - Principals with 5 years experience as a principal or less,Percentage,888933044556.csv
+605, - Principals with more than 5 years experience as a principal,Percentage,888933044556.csv
+606, - Principals with a highest level of education of ISCED 5b or below,Percentage,888933044556.csv
+607, - Principals with a highest level of education of ISCED 5a or above,Percentage,888933044556.csv
+608,Principals working in schools located in areas with 15 001 to 100 000 people - ,Percentage,888933044556.csv
+609,Within schools located in areas with 15 001 to 100 000 people - Principals with 5 years experience as a principal or less,Percentage,888933044556.csv
+610, - Principals with more than 5 years experience as a principal,Percentage,888933044556.csv
+611, - Principals with a highest level of education of ISCED 5b or below,Percentage,888933044556.csv
+612, - Principals with a highest level of education of ISCED 5a or above,Percentage,888933044556.csv
+613,Principals working in schools located in areas with more than 100 000 people - ,Percentage,888933044556.csv
+614,Within schools located in areas with more than 100 000 people - Principals with 5 years experience as a principal or less,Percentage,888933044556.csv
+615, - Principals with more than 5 years experience as a principal,Percentage,888933044556.csv
+616, - Principals with a highest level of education of ISCED 5b or below,Percentage,888933044556.csv
+617, - Principals with a highest level of education of ISCED 5a or above,Percentage,888933044556.csv
+618,Check for below 5% - Principals with 5 years experience as a principal or less,,888933044556.csv
+619, - Principals with more than 5 years experience as a principal,,888933044556.csv
+620, - Principals with a highest level of education of ISCED 5b or below,,888933044556.csv
+621, - Principals with a highest level of education of ISCED 5a or above,,888933044556.csv
+622,Hamlet or rural area (1 000 people or less),Percentage,888933044575.csv
+623,Village (1 001 to 3 000 people),Percentage,888933044575.csv
+624,Small town (3 001 to 15 000 people),Percentage,888933044575.csv
+625,Town (15 001 to 100 000 people),Percentage,888933044575.csv
+626,City (100 001 to 1 000 000 people,Percentage,888933044575.csv
+627,Large city (more than 1 000 000 people),Percentage,888933044575.csv
+628,Presence of school governing board - ,Percentage,888933044594.csv
+629,Composition of school governing board - Representative of a local municipal/regional state or national/federal authority,Percentage,888933044594.csv
+630, - Members of the school management team,Percentage,888933044594.csv
+631, - School administrative personnel,Percentage,888933044594.csv
+632, - Teachers,Percentage,888933044594.csv
+633, - Parents or guardians,Percentage,888933044594.csv
+634, - Students,Percentage,888933044594.csv
+635, - Trade unions,Percentage,888933044594.csv
+636, - Representatives of business labour market institutions a church or other private institutions,Percentage,888933044594.csv
+637, - Other,Percentage,888933044594.csv
+638,Workshops or courses for parents or guardians,Percentage,888933044613.csv
+639,Services to support parents' or guardians' participation such as providing child care,Percentage,888933044613.csv
+640,Support for parental association(s),Percentage,888933044613.csv
+641,Parental meeting(s),Percentage,888933044613.csv
+642,This school provides staff with opportunities to actively participate in school decisions - Strongly disagree,Percentage,888933044632.csv
+643, - Disagree,Percentage,888933044632.csv
+644, - Agree,Percentage,888933044632.csv
+645, - Strongly agree,Percentage,888933044632.csv
+646,This school provides parents or guardians with opportunities to actively participate in school decisions - Strongly disagree,Percentage,888933044632.csv
+647, - Disagree,Percentage,888933044632.csv
+648, - Agree,Percentage,888933044632.csv
+649, - Strongly agree,Percentage,888933044632.csv
+650,This school provides students with opportunities to actively participate in school decisions - Strongly disagree,Percentage,888933044632.csv
+651, - Disagree,Percentage,888933044632.csv
+652, - Agree,Percentage,888933044632.csv
+653, - Strongly agree,Percentage,888933044632.csv
+654,This school has a culture of shared responsibility for school issues - Strongly disagree,Percentage,888933044632.csv
+655, - Disagree,Percentage,888933044632.csv
+656, - Agree,Percentage,888933044632.csv
+657, - Strongly agree,Percentage,888933044632.csv
+658,There is a collaborative school culture that which is characterised by mutual support - Strongly disagree,Percentage,888933044632.csv
+659, - Disagree,Percentage,888933044632.csv
+660, - Agree,Percentage,888933044632.csv
+661, - Strongly agree,Percentage,888933044632.csv
+662,This school provides staff with opportunities to actively participate in school decisions - Strongly disagree,Percentage,888933044651.csv
+663, - Disagree,Percentage,888933044651.csv
+664, - Agree,Percentage,888933044651.csv
+665, - Strongly agree,Percentage,888933044651.csv
+666,This school provides parents or guardians with opportunities to actively participate in school decisions - Strongly disagree,Percentage,888933044651.csv
+667, - Disagree,Percentage,888933044651.csv
+668, - Agree,Percentage,888933044651.csv
+669, - Strongly agree,Percentage,888933044651.csv
+670,This school provides students with opportunities to actively participate in school decisions - Strongly disagree,Percentage,888933044651.csv
+671, - Disagree,Percentage,888933044651.csv
+672, - Agree,Percentage,888933044651.csv
+673, - Strongly agree,Percentage,888933044651.csv
+674,I make important decisions on my own - Strongly disagree,Percentage,888933044651.csv
+675, - Disagree,Percentage,888933044651.csv
+676, - Agree,Percentage,888933044651.csv
+677, - Strongly agree,Percentage,888933044651.csv
+678,There is a collaborative school culture that which is characterised by mutual support - Strongly disagree,Percentage,888933044651.csv
+679, - Disagree,Percentage,888933044651.csv
+680, - Agree,Percentage,888933044651.csv
+681, - Strongly agree,Percentage,888933044651.csv
+682,Access to induction programmes or activities (reported by principals) - Formal induction - For all new teachers to the school,Percentage,888933044727.csv
+683, -  - Only for teachers new to teaching,Percentage,888933044727.csv
+684, -  - No induction programme for new teachers,Percentage,888933044727.csv
+685, - Informal induction activities (not part of an induction programme) for new teachers - ,Percentage,888933044727.csv
+686, - General and/or administrative introduction to the school for new teachers - ,Percentage,888933044727.csv
+687,Participation in induction programmes or activities (reported by teachers) - Took part in a formal induction programme - ,Percentage,888933044727.csv
+688, - Took part in informal induction activities not part of an induction programme - ,Percentage,888933044727.csv
+689, - Took part in a general and/or administrative introduction to the school - ,Percentage,888933044727.csv
+690,Gender - Male teachers,Percentage,888933044784.csv
+691, - Female teachers,Percentage,888933044784.csv
+692,Experience - Teachers with 5 years teaching experience or less,Percentage,888933044784.csv
+693, - Teachers with more than 5 years teaching experience,Percentage,888933044784.csv
+694,Work status - Permanent teachers ,Percentage,888933044784.csv
+695, - Fixed-term teachers,Percentage,888933044784.csv
+696,Hours of work per week4 - Teachers working less than 30 hours per week,Percentage,888933044784.csv
+697, - Teachers working 30 hours per week or more,Percentage,888933044784.csv
+698,Check for below 5% - Male,,888933044784.csv
+699, - Female,,888933044784.csv
+700, - 5 y or less,,888933044784.csv
+701, - More than 5,,888933044784.csv
+702, - Permanent,,888933044784.csv
+703, - Fixed-term,,888933044784.csv
+704, - <30h,,888933044784.csv
+705, - 30=<,,888933044784.csv
+706,Access to mentoring programmes (reported by principals) - Target group of mentoring system - Only for teachers who are new to teaching,Percentage,888933044803.csv
+707, -  - For all teachers who are new to the school,Percentage,888933044803.csv
+708, -  - For all teachers in the school,Percentage,888933044803.csv
+709, -  - There is no access to a mentoring system for teachers in the school,Percentage,888933044803.csv
+710, - The subject field(s) of the mentor is the same as that of the teacher being mentored - Most of the time,Percentage,888933044803.csv
+711, -  - Sometimes,Percentage,888933044803.csv
+712, -  - Rarely or never,Percentage,888933044803.csv
+713,Participation in mentoring programmes (reported by teachers) - Teachers who presently have an assigned mentor to support them - ,Percentage,888933044803.csv
+714, - Teachers who serve as an assigned mentor for one or more teachers - ,Percentage,888933044803.csv
+715,Gender - Male teachers,Percentage,888933044860.csv
+716, - Female teachers,Percentage,888933044860.csv
+717,Experience - Teachers with 5 years teaching experience or less,Percentage,888933044860.csv
+718, - Teachers with more than 5 years teaching experience,Percentage,888933044860.csv
+719,Work status - Permanent teachers ,Percentage,888933044860.csv
+720, - Fixed-term teachers3,Percentage,888933044860.csv
+721,Hours of work per week4 - Teachers working less than 30 hours per week,Percentage,888933044860.csv
+722, - Teachers working 30 hours per week or more,Percentage,888933044860.csv
+723,Check for below 5% - Male,,888933044860.csv
+724, - Female,,888933044860.csv
+725, - 5 y or less,,888933044860.csv
+726, - More than 5,,888933044860.csv
+727, - Permanent,,888933044860.csv
+728, - Fixed-term,,888933044860.csv
+729, - <30h,,888933044860.csv
+730, - 30=<,,888933044860.csv
+731,Gender - Male teachers,Percentage,888933044879.csv
+732, - Female teachers,Percentage,888933044879.csv
+733,Experience - Teachers with 5 years teaching experience or less,Percentage,888933044879.csv
+734, - Teachers with more than f5 years teaching experience,Percentage,888933044879.csv
+735,Work status - Permanent teachers ,Percentage,888933044879.csv
+736, - Fixed-term teachers,Percentage,888933044879.csv
+737,Hours of work per week4 - Teachers working less than 30 hours per week,Percentage,888933044879.csv
+738, - Teachers working 30 hours per week or more,Percentage,888933044879.csv
+739,Check for below 5% - Male,,888933044879.csv
+740, - Female,,888933044879.csv
+741, - 5 y or less,,888933044879.csv
+742, - More than 5,,888933044879.csv
+743, - Permanent,,888933044879.csv
+744, - Fixed-term,,888933044879.csv
+745, - <30h,,888933044879.csv
+746, - 30=<,,888933044879.csv
+747,Percentage of teachers who undertook some professional development activities in the previous 12 months1 - ,Percentage,888933044898.csv
+748,Percentage of teachers who undertook some professional development activities in the previous 12 months without any type of support2 - ,Percentage,888933044898.csv
+749,Percentage of teachers who had to pay for none some or all of the professional development activities undertaken - None,Percentage,888933044898.csv
+750, - Some,Percentage,888933044898.csv
+751, - All,Percentage,888933044898.csv
+752,Gender - Male teachers,Percentage,888933044974.csv
+753, - Female teachers,Percentage,888933044974.csv
+754,Experience - Teachers with 5 years teaching experience or less,Percentage,888933044974.csv
+755, - Teachers with more than 5 years teaching experience,Percentage,888933044974.csv
+756,Work status - Permanent teachers ,Percentage,888933044974.csv
+757, - Fixed-term teachers,Percentage,888933044974.csv
+758,Hours of work per week - Teachers working less than 30 hours per week,Percentage,888933044974.csv
+759, - Teachers working 30 hours per week or more,Percentage,888933044974.csv
+760,Check for below 5% - Male,,888933044974.csv
+761, - Female,,888933044974.csv
+762, - 5 y or less,,888933044974.csv
+763, - More than 5,,888933044974.csv
+764, - Permanent,,888933044974.csv
+765, - Fixed-term,,888933044974.csv
+766, - <30h,,888933044974.csv
+767, - 30=<,,888933044974.csv
+768,School type - Teachers working in public schools,Percentage,888933044993.csv
+769, - Teachers working in private schools,Percentage,888933044993.csv
+770,School location - Teachers working in schools located in areas with 15 000 people or less,Percentage,888933044993.csv
+771, - Teachers working in schools located in areas with 15 001 to 100 000 people,Percentage,888933044993.csv
+772, - Teachers working in schools located in areas with more than 100 000 people,Percentage,888933044993.csv
+773, - Public,,888933044993.csv
+774,Check for below 5% - Private,,888933044993.csv
+775, - <=15000,,888933044993.csv
+776, - 15001-100000,,888933044993.csv
+777, - 100000=<,,888933044993.csv
+778,Courses/workshops - Percentage of teachers,Percentage,888933045031.csv
+779, - Average days,Average,888933045031.csv
+780,Education conferences or seminars where teachers and/or researchers present their research results and discuss educational issues - Percentage of teachers,Percentage,888933045031.csv
+781, - Average days,Average,888933045031.csv
+782,Observation visits to other schools - Percentage of teachers,Percentage,888933045031.csv
+783, - Average days,Average,888933045031.csv
+784,Observation visits to business premises public organisations non-governmental organisations - Percentage of teachers,Percentage,888933045031.csv
+785, - Average days,Average,888933045031.csv
+786,In-service training courses in business premises public organisations non-governmental organisations - Percentage of teachers,Percentage,888933045031.csv
+787, - Average days,Average,888933045031.csv
+788,Qualification programme (e.g. a degree programme) - Percentage of teachers,Percentage,888933045031.csv
+789,Participation in a network of teachers formed specifically for the professional development of teachers - Percentage of teachers,Percentage,888933045031.csv
+790,Individual or collaborative research on a topic of interest to the teacher - Percentage of teachers,Percentage,888933045031.csv
+791,Mentoring and/or peer observation and coaching as part of a formal school arrangement - Percentage of teachers,Percentage,888933045031.csv
+792,Knowledge and understanding of subject field(s) - Percentage of teachers - ,Percentage,888933045069.csv
+793, - Positive impact - No,Percentage,888933045069.csv
+794, -  - Small,Percentage,888933045069.csv
+795, -  - Moderate,Percentage,888933045069.csv
+796, -  - Large,Percentage,888933045069.csv
+797,Pedagogical competencies in teaching subject field(s) - Percentage of teachers - ,Percentage,888933045069.csv
+798, - Positive impact - No,Percentage,888933045069.csv
+799, -  - Small,Percentage,888933045069.csv
+800, -  - Moderate,Percentage,888933045069.csv
+801, -  - Large,Percentage,888933045069.csv
+802,Knowledge of the curriculum - Percentage of teachers - ,Percentage,888933045069.csv
+803, - Positive impact - No,Percentage,888933045069.csv
+804, -  - Small,Percentage,888933045069.csv
+805, -  - Moderate,Percentage,888933045069.csv
+806, -  - Large,Percentage,888933045069.csv
+807,Student evaluation and assessment practices - Percentage of teachers - ,Percentage,888933045069.csv
+808, - Positive impact - No,Percentage,888933045069.csv
+809, -  - Small,Percentage,888933045069.csv
+810, -  - Moderate,Percentage,888933045069.csv
+811, -  - Large,Percentage,888933045069.csv
+812,ICT skills for teaching - Percentage of teachers - ,Percentage,888933045069.csv
+813, - Positive impact - No,Percentage,888933045069.csv
+814, -  - Small,Percentage,888933045069.csv
+815, -  - Moderate,Percentage,888933045069.csv
+816, -  - Large,Percentage,888933045069.csv
+817,Student behaviour and classroom management - Percentage of teachers - ,Percentage,888933045069.csv
+818, - Positive impact - No,Percentage,888933045069.csv
+819, -  - Small,Percentage,888933045069.csv
+820, -  - Moderate,Percentage,888933045069.csv
+821, -  - Large,Percentage,888933045069.csv
+822,School management and administration - Percentage of teachers - ,Percentage,888933045069.csv
+823, - Positive impact - No,Percentage,888933045069.csv
+824, -  - Small,Percentage,888933045069.csv
+825, -  - Moderate,Percentage,888933045069.csv
+826, -  - Large,Percentage,888933045069.csv
+827,Approaches to individual learning - Percentage of teachers - ,Percentage,888933045069.csv
+828, - Positive impact - No,Percentage,888933045069.csv
+829, -  - Small,Percentage,888933045069.csv
+830, -  - Moderate,Percentage,888933045069.csv
+831, -  - Large,Percentage,888933045069.csv
+832,Teaching students with special needs2 - Percentage of teachers - ,Percentage,888933045069.csv
+833, - Positive impact - No,Percentage,888933045069.csv
+834, -  - Small,Percentage,888933045069.csv
+835, -  - Moderate,Percentage,888933045069.csv
+836, -  - Large,Percentage,888933045069.csv
+837,Teaching in a multicultural or multilingual setting - Percentage of teachers - ,Percentage,888933045069.csv
+838, - Positive impact - No,Percentage,888933045069.csv
+839, -  - Small,Percentage,888933045069.csv
+840, -  - Moderate,Percentage,888933045069.csv
+841, -  - Large,Percentage,888933045069.csv
+842,Teaching cross-curricular skills (e.g. problem solving learning-to-learn) - Percentage of teachers - ,Percentage,888933045069.csv
+843, - Positive impact - No,Percentage,888933045069.csv
+844, -  - Small,Percentage,888933045069.csv
+845, -  - Moderate,Percentage,888933045069.csv
+846, -  - Large,Percentage,888933045069.csv
+847,Approaches to developing cross-occupational competencies for future work or future studies - Percentage of teachers - ,Percentage,888933045069.csv
+848, - Positive impact - No,Percentage,888933045069.csv
+849, -  - Small,Percentage,888933045069.csv
+850, -  - Moderate,Percentage,888933045069.csv
+851, -  - Large,Percentage,888933045069.csv
+852,New technologies in the workplace - Percentage of teachers - ,Percentage,888933045069.csv
+853, - Positive impact - No,Percentage,888933045069.csv
+854, -  - Small,Percentage,888933045069.csv
+855, -  - Moderate,Percentage,888933045069.csv
+856, -  - Large,Percentage,888933045069.csv
+857,Student career guidance and counselling - Percentage of teachers - ,Percentage,888933045069.csv
+858, - Positive impact - No,Percentage,888933045069.csv
+859, - Small,Percentage,888933045069.csv
+860, - Moderate,Percentage,888933045069.csv
+861, - Large,Percentage,888933045069.csv
+862,Scheduled time for activities that took place during regular working hours at this school,Percentage,888933045088.csv
+863,Salary supplement for activities outside working hours,Percentage,888933045088.csv
+864,Non-monetary support for activities outside working hours (reduced teaching days off study leave etc.),Percentage,888933045088.csv
+865,Knowledge and understanding of the subject field(s) - No need at present,Percentage,888933045183.csv
+866, - Low level of need,Percentage,888933045183.csv
+867, - Moderate level of need,Percentage,888933045183.csv
+868, - High level of need,Percentage,888933045183.csv
+869,Pedagogical competencies in teaching subject field(s) - No need at present,Percentage,888933045183.csv
+870, - Low level of need,Percentage,888933045183.csv
+871, - Moderate level of need,Percentage,888933045183.csv
+872, - High level of need,Percentage,888933045183.csv
+873,Knowledge of the curriculum - No need at present,Percentage,888933045183.csv
+874, - Low level of need,Percentage,888933045183.csv
+875, - Moderate level of need,Percentage,888933045183.csv
+876, - High level of need,Percentage,888933045183.csv
+877,Student evaluation and assessment practice - No need at present,Percentage,888933045183.csv
+878, - Low level of need,Percentage,888933045183.csv
+879, - Moderate level of need,Percentage,888933045183.csv
+880, - High level of need,Percentage,888933045183.csv
+881,ICT skills for teaching - No need at present,Percentage,888933045183.csv
+882, - Low level of need,Percentage,888933045183.csv
+883, - Moderate level of need,Percentage,888933045183.csv
+884, - High level of need,Percentage,888933045183.csv
+885,Student behaviour and classroom management - No need at present,Percentage,888933045183.csv
+886, - Low level of need,Percentage,888933045183.csv
+887, - Moderate level of need,Percentage,888933045183.csv
+888, - High level of need,Percentage,888933045183.csv
+889,School management and administration - No need at present,Percentage,888933045183.csv
+890, - Low level of need,Percentage,888933045183.csv
+891, - Moderate level of need,Percentage,888933045183.csv
+892, - High level of need,Percentage,888933045183.csv
+893,Approaches to individualised learning - No need at present,Percentage,888933045183.csv
+894, - Low level of need,Percentage,888933045183.csv
+895, - Moderate level of need,Percentage,888933045183.csv
+896, - High level of need,Percentage,888933045183.csv
+897,Teaching students with special needs - No need at present,Percentage,888933045183.csv
+898, - Low level of need,Percentage,888933045183.csv
+899, - Moderate level of need,Percentage,888933045183.csv
+900, - High level of need,Percentage,888933045183.csv
+901,Teaching in a multicultural or multilingual setting - No need at present,Percentage,888933045183.csv
+902, - Low level of need,Percentage,888933045183.csv
+903, - Moderate level of need,Percentage,888933045183.csv
+904, - High level of need,Percentage,888933045183.csv
+905,Teaching cross-curricular skills (e.g. problem solving learning-to-learn) - No need at present,Percentage,888933045183.csv
+906, - Low level of need,Percentage,888933045183.csv
+907, - Moderate level of need,Percentage,888933045183.csv
+908, - High level of need,Percentage,888933045183.csv
+909,Approaches to developing cross-occupational competencies for future work or future studies - No need at present,Percentage,888933045183.csv
+910, - Low level of need,Percentage,888933045183.csv
+911, - Moderate level of need,Percentage,888933045183.csv
+912, - High level of need,Percentage,888933045183.csv
+913,New technologies in the workplace - No need at present,Percentage,888933045183.csv
+914, - Low level of need,Percentage,888933045183.csv
+915, - Moderate level of need,Percentage,888933045183.csv
+916, - High level of need,Percentage,888933045183.csv
+917,Student career guidance and counselling - No need at present,Percentage,888933045183.csv
+918, - Low level of need,Percentage,888933045183.csv
+919, - Moderate level of need,Percentage,888933045183.csv
+920, - High level of need,Percentage,888933045183.csv
+921,Do not have the pre-requisites (e.g. qualifications experience seniority) - Strongly disagree,Percentage,888933045259.csv
+922, - Disagree,Percentage,888933045259.csv
+923, - Agree,Percentage,888933045259.csv
+924, - Strongly agree,Percentage,888933045259.csv
+925,Professional development is too expensive/unaffordable - Strongly disagree,Percentage,888933045259.csv
+926, - Disagree,Percentage,888933045259.csv
+927, - Agree,Percentage,888933045259.csv
+928, - Strongly agree,Percentage,888933045259.csv
+929,There is a lack of employer support - Strongly disagree,Percentage,888933045259.csv
+930, - Disagree,Percentage,888933045259.csv
+931, - Agree,Percentage,888933045259.csv
+932, - Strongly agree,Percentage,888933045259.csv
+933,Professional development conflicts with my work schedule - Strongly disagree,Percentage,888933045259.csv
+934, - Disagree,Percentage,888933045259.csv
+935, - Agree,Percentage,888933045259.csv
+936, - Strongly agree,Percentage,888933045259.csv
+937,Lack of time due to family responsibilities - Strongly disagree,Percentage,888933045259.csv
+938, - Disagree,Percentage,888933045259.csv
+939, - Agree,Percentage,888933045259.csv
+940, - Strongly agree,Percentage,888933045259.csv
+941,There is no relevant professional development offered - Strongly disagree,Percentage,888933045259.csv
+942, - Disagree,Percentage,888933045259.csv
+943, - Agree,Percentage,888933045259.csv
+944, - Strongly agree,Percentage,888933045259.csv
+945,There are no incentives for participating in such activities - Strongly disagree,Percentage,888933045259.csv
+946, - Disagree,Percentage,888933045259.csv
+947, - Agree,Percentage,888933045259.csv
+948, - Strongly agree,Percentage,888933045259.csv
+949,Mentoring by experienced teachers,Percentage,888933045278.csv
+950,Courses/seminars,Percentage,888933045278.csv
+951,Scheduled meetings with principal and/or colleague teachers,Percentage,888933045278.csv
+952,A system of peer review,Percentage,888933045278.csv
+953,Networking/virtual communities,Percentage,888933045278.csv
+954,Collaboration with other schools,Percentage,888933045278.csv
+955,Team teaching (with more experienced teachers),Percentage,888933045278.csv
+956,A system of diary/journals portfolios etc. to facilitate learning and reflection,Percentage,888933045278.csv
+957,To improve teachers' pedagogical competence - Not important at all,Percentage,888933045316.csv
+958, - Of low importance,Percentage,888933045316.csv
+959, - Of moderate importance,Percentage,888933045316.csv
+960, - Of high importance,Percentage,888933045316.csv
+961,To strengthen teachers' professional identity - Not important at all,Percentage,888933045316.csv
+962, - Of low importance,Percentage,888933045316.csv
+963, - Of moderate importance,Percentage,888933045316.csv
+964, - Of high importance,Percentage,888933045316.csv
+965,To improve teachers' collaboration with colleagues - Not important at all,Percentage,888933045316.csv
+966, - Of low importance,Percentage,888933045316.csv
+967, - Of moderate importance,Percentage,888933045316.csv
+968, - Of high importance,Percentage,888933045316.csv
+969,To support less experienced teachers in their teaching - Not important at all,Percentage,888933045316.csv
+970, - Of low importance,Percentage,888933045316.csv
+971, - Of moderate importance,Percentage,888933045316.csv
+972, - Of high importance,Percentage,888933045316.csv
+973,To expand teachers' main subject(s) knowledge - Not important at all,Percentage,888933045316.csv
+974, - Of low importance,Percentage,888933045316.csv
+975, - Of moderate importance,Percentage,888933045316.csv
+976, - Of high importance,Percentage,888933045316.csv
+977,To improve students' general performance - Not important at all,Percentage,888933045316.csv
+978, - Of low importance,Percentage,888933045316.csv
+979, - Of moderate importance,Percentage,888933045316.csv
+980, - Of high importance,Percentage,888933045316.csv
+981,A group of colleagues from the school or subject group - Not in any activity,Percentage,888933045354.csv
+982, - Yes in some activities,Percentage,888933045354.csv
+983, - Yes in most activities,Percentage,888933045354.csv
+984, - Yes in all activities,Percentage,888933045354.csv
+985,Opportunities for active learning methods (not only listening to a lecturer) - Not in any activity,Percentage,888933045354.csv
+986, - Yes in some activities,Percentage,888933045354.csv
+987, - Yes in most activities,Percentage,888933045354.csv
+988, - Yes in all activities,Percentage,888933045354.csv
+989,Collaborative learning activities or research with other teachers - Not in any activity,Percentage,888933045354.csv
+990, - Yes in some activities,Percentage,888933045354.csv
+991, - Yes in most activities,Percentage,888933045354.csv
+992, - Yes in all activities,Percentage,888933045354.csv
+993,An extended time period time period (several occasions spread out over several weeks or months) - Not in any activity,Percentage,888933045354.csv
+994, - Yes in some activities,Percentage,888933045354.csv
+995, - Yes in most activities,Percentage,888933045354.csv
+996, - Yes in all activities,Percentage,888933045354.csv
+997,Never formally appraised by the school principal,Percentage,888933045582.csv
+998,Never formally appraised by other members of the school management team,Percentage,888933045582.csv
+999,Never formally appraised by the teacher's mentor,Percentage,888933045582.csv
+1000,Never formally appraised by other teachers,Percentage,888933045582.csv
+1001,Never formally appraised by external individuals or bodies,Percentage,888933045582.csv
+1002,Generally never formally appraised ,Percentage,888933045582.csv
+1003,Formally appraised by the school principal - Never,Percentage,888933045601.csv
+1004, - Less than once every two years,Percentage,888933045601.csv
+1005, - Once every two years,Percentage,888933045601.csv
+1006, - Once per year,Percentage,888933045601.csv
+1007, - Twice or more per year,Percentage,888933045601.csv
+1008,Formally appraised by other members of the school management team - Never,Percentage,888933045601.csv
+1009, - Less than once every two years,Percentage,888933045601.csv
+1010, - Once every two years,Percentage,888933045601.csv
+1011, - Once per year,Percentage,888933045601.csv
+1012, - Twice or more per year,Percentage,888933045601.csv
+1013,Formally appraised by the teacher's mentor - Never,Percentage,888933045601.csv
+1014, - Less than once every two years,Percentage,888933045601.csv
+1015, - Once every two years,Percentage,888933045601.csv
+1016, - Once per year,Percentage,888933045601.csv
+1017, - Twice or more per years,Percentage,888933045601.csv
+1018,Formally appraised by other teachers - Never,Percentage,888933045601.csv
+1019, - Less than once every two years,Percentage,888933045601.csv
+1020, - Once every two years,Percentage,888933045601.csv
+1021, - Once per year,Percentage,888933045601.csv
+1022, - Twice or more per years,Percentage,888933045601.csv
+1023,Formally appraised by external individuals or bodies - Never,Percentage,888933045601.csv
+1024, - Less than once every two years,Percentage,888933045601.csv
+1025, - Once every two years,Percentage,888933045601.csv
+1026, - Once per year,Percentage,888933045601.csv
+1027, - Twice or more per years,Percentage,888933045601.csv
+1028,Appraisal used in the school where the teacher works,Percentage,888933045620.csv
+1029,Direct observation of classroom teaching ,Percentage,888933045620.csv
+1030,Student surveys about teaching,Percentage,888933045620.csv
+1031,Assessment of teachers' content knowledge,Percentage,888933045620.csv
+1032,Analysis of student test scores,Percentage,888933045620.csv
+1033,Discussion of teachers' self-assessments of their work,Percentage,888933045620.csv
+1034,Discussion about feedback received from parents or guardians,Percentage,888933045620.csv
+1035,Measures to remedy any weaknesses in teaching are discussed with the teacher - Never,Percentage,888933045772.csv
+1036, - Sometimes,Percentage,888933045772.csv
+1037, - Most of the time,Percentage,888933045772.csv
+1038, - Always,Percentage,888933045772.csv
+1039,A development or training plan is developed for each teacher - Never,Percentage,888933045772.csv
+1040, - Sometimes,Percentage,888933045772.csv
+1041, - Most of the time,Percentage,888933045772.csv
+1042, - Always,Percentage,888933045772.csv
+1043,Material sanctions (e.g. reduced annual increases in pay) are imposed on poor performers - Never,Percentage,888933045772.csv
+1044, - Sometimes,Percentage,888933045772.csv
+1045, - Most of the time,Percentage,888933045772.csv
+1046, - Always,Percentage,888933045772.csv
+1047,A mentor is appointed to help the teacher improve his/her teaching - Never,Percentage,888933045772.csv
+1048, - Sometimes,Percentage,888933045772.csv
+1049, - Most of the time,Percentage,888933045772.csv
+1050, - Always,Percentage,888933045772.csv
+1051,A change in teachers' work responsibilities - Never,Percentage,888933045772.csv
+1052, - Sometimes,Percentage,888933045772.csv
+1053, - Most of the time,Percentage,888933045772.csv
+1054, - Always,Percentage,888933045772.csv
+1055,A change in teachers' salary or a payment of a financial bonus - Never,Percentage,888933045772.csv
+1056, - Sometimes,Percentage,888933045772.csv
+1057, - Most of the time,Percentage,888933045772.csv
+1058, - Always,Percentage,888933045772.csv
+1059,A change in the likelihood of career advancement - Never,Percentage,888933045772.csv
+1060, - Sometimes,Percentage,888933045772.csv
+1061, - Most of the time,Percentage,888933045772.csv
+1062, - Always,Percentage,888933045772.csv
+1063,Dismissal or non-renewal of contract - Never,Percentage,888933045772.csv
+1064, - Sometimes,Percentage,888933045772.csv
+1065, - Most of the time,Percentage,888933045772.csv
+1066, - Always,Percentage,888933045772.csv
+1067,Have received feedback from2 - External individuals or bodies,Percentage,888933045791.csv
+1068, - School principal,Percentage,888933045791.csv
+1069, - Members of school management team,Percentage,888933045791.csv
+1070, - Assigned mentors,Percentage,888933045791.csv
+1071, - Other teachers,Percentage,888933045791.csv
+1072,Have never received feedback in their current school3 - ,Percentage,888933045791.csv
+1073,Feedback following classroom observation,Percentage,888933045848.csv
+1074,Feedback from student surveys,Percentage,888933045848.csv
+1075,Feedback following assessment of teachers' content knowledge,Percentage,888933045848.csv
+1076,Feedback following analysis of student test scores,Percentage,888933045848.csv
+1077,Feedback following self-assessment of teachers' work,Percentage,888933045848.csv
+1078,Feedback from surveys or discussion with parents,Percentage,888933045848.csv
+1079,Student performance,Percentage,888933046019.csv
+1080,Knowledge and understanding of the subject field(s),Percentage,888933046019.csv
+1081,Pedagogical competencies in teaching the subject field(s),Percentage,888933046019.csv
+1082,Student assessment practices,Percentage,888933046019.csv
+1083,Student behaviour and classroom management,Percentage,888933046019.csv
+1084,Teaching of students with special learning needs,Percentage,888933046019.csv
+1085,Teaching in a multicultural or multilingual setting,Percentage,888933046019.csv
+1086,Feedback provided to other teachers to help their teaching,Percentage,888933046019.csv
+1087,Feedback from parents or guardians,Percentage,888933046019.csv
+1088,Student feedback,Percentage,888933046019.csv
+1089,Collaboration or working with other teachers,Percentage,888933046019.csv
+1090,Public recognition - No positive change,Percentage,888933046171.csv
+1091, - A small change,Percentage,888933046171.csv
+1092, - A moderate change,Percentage,888933046171.csv
+1093, - A large change,Percentage,888933046171.csv
+1094,Role in school development initiatives - No positive change,Percentage,888933046171.csv
+1095, - A small change,Percentage,888933046171.csv
+1096, - A moderate change,Percentage,888933046171.csv
+1097, - A large change,Percentage,888933046171.csv
+1098,Likelihood of career advancement - No positive change,Percentage,888933046171.csv
+1099,Likelihood of career advancement - A small change,Percentage,888933046171.csv
+1100,Likelihood of career advancement - A moderate change,Percentage,888933046171.csv
+1101,Likelihood of career advancement - A large change,Percentage,888933046171.csv
+1102,Amount of professional development - No positive change,Percentage,888933046171.csv
+1103,Amount of professional development - A small change,Percentage,888933046171.csv
+1104,Amount of professional development - A moderate change,Percentage,888933046171.csv
+1105,Amount of professional development - A large change,Percentage,888933046171.csv
+1106,Job responsibilities - No positive change,Percentage,888933046171.csv
+1107,Job responsibilities - A small change,Percentage,888933046171.csv
+1108,Job responsibilities - A moderate change,Percentage,888933046171.csv
+1109,Job responsibilities - A large change,Percentage,888933046171.csv
+1110,Confidence as a teacher - No positive change,Percentage,888933046171.csv
+1111,Teachers' confidence - A small change,Percentage,888933046171.csv
+1112,Teachers' confidence - A moderate change,Percentage,888933046171.csv
+1113,Teachers' confidence - A large change,Percentage,888933046171.csv
+1114,Salary and/or financial bonus - No positive change,Percentage,888933046171.csv
+1115,Salary and/or financial bonus - A small change,Percentage,888933046171.csv
+1116,Salary and/or financial bonus - A moderate change,Percentage,888933046171.csv
+1117,Salary and/or financial bonus - A large change,Percentage,888933046171.csv
+1118,Classroom management practices - No positive change,Percentage,888933046171.csv
+1119,Classroom management practices - A small change,Percentage,888933046171.csv
+1120,Classroom management practices - A moderate change,Percentage,888933046171.csv
+1121,Classroom management practices - A large change,Percentage,888933046171.csv
+1122,Knowledge and understanding of main subject field(s) - No positive change,Percentage,888933046171.csv
+1123,Knowledge and understanding of main subject field(s) - A small change,Percentage,888933046171.csv
+1124,Knowledge and understanding of main subject field(s) - A moderate change,Percentage,888933046171.csv
+1125,Knowledge and understanding of main subject field(s) - A large change,Percentage,888933046171.csv
+1126,Teaching practices - No positive change,Percentage,888933046171.csv
+1127,Teaching practices - A small change,Percentage,888933046171.csv
+1128,Teaching practices - A moderate change,Percentage,888933046171.csv
+1129,Teaching practices - A large change,Percentage,888933046171.csv
+1130,Methods for teaching students with special needs - No positive change,Percentage,888933046171.csv
+1131,Methods for teaching students with special needs - A small change,Percentage,888933046171.csv
+1132,Methods for teaching students with special needs - A moderate change,Percentage,888933046171.csv
+1133,Methods for teaching students with special needs - A large change,Percentage,888933046171.csv
+1134,Student assessments to improve student learning - No positive change,Percentage,888933046171.csv
+1135,Student assessments to improve student learning - A small change,Percentage,888933046171.csv
+1136,Student assessments to improve student learning - A moderate change,Percentage,888933046171.csv
+1137,Student assessments to improve student learning - A large change,Percentage,888933046171.csv
+1138,Job satisfaction - No positive change,Percentage,888933046171.csv
+1139, - A small change,Percentage,888933046171.csv
+1140, - A moderate change,Percentage,888933046171.csv
+1141, - A large change,Percentage,888933046171.csv
+1142,Motivation - No positive change,Percentage,888933046171.csv
+1143, - A small change,Percentage,888933046171.csv
+1144, - A moderate change,Percentage,888933046171.csv
+1145, - A large change,Percentage,888933046171.csv
+1146,The best performing teachers in this school receive the greatest recognition - Strongly disagree,Percentage,888933046228.csv
+1147, - Disagree,Percentage,888933046228.csv
+1148, - Agree,Percentage,888933046228.csv
+1149, - Strongly agree,Percentage,888933046228.csv
+1150,Teacher appraisal and feedback have little impact upon the way teachers teach in the classroom - Strongly disagree,Percentage,888933046228.csv
+1151, - Disagree,Percentage,888933046228.csv
+1152, - Agree,Percentage,888933046228.csv
+1153, - Strongly agree,Percentage,888933046228.csv
+1154,Teacher appraisal and feedback are largely done to fulfil administrative requirements - Strongly disagree,Percentage,888933046228.csv
+1155, - Disagree,Percentage,888933046228.csv
+1156, - Agree,Percentage,888933046228.csv
+1157, - Strongly agree,Percentage,888933046228.csv
+1158,A development or training plan is established to improve their work as a teacher - Strongly disagree,Percentage,888933046228.csv
+1159, - Disagree,Percentage,888933046228.csv
+1160, - Agree,Percentage,888933046228.csv
+1161, - Strongly agree,Percentage,888933046228.csv
+1162,Feedback is provided to teachers based on a thorough assessment of their teaching - Strongly disagree,Percentage,888933046228.csv
+1163, - Disagree,Percentage,888933046228.csv
+1164, - Agree,Percentage,888933046228.csv
+1165, - Strongly agree,Percentage,888933046228.csv
+1166,If a teacher is consistently underperforming he/she would be dismissed - Strongly disagree,Percentage,888933046228.csv
+1167, - Disagree,Percentage,888933046228.csv
+1168, - Agree,Percentage,888933046228.csv
+1169, - Strongly agree,Percentage,888933046228.csv
+1170,Measures to remedy any weaknesses in teaching are discussed with the teacher - Strongly disagree,Percentage,888933046228.csv
+1171, - Disagree,Percentage,888933046228.csv
+1172, - Agree,Percentage,888933046228.csv
+1173, - Strongly agree,Percentage,888933046228.csv
+1174,A mentor is appointed to help teachers improve his/her teaching - Strongly disagree,Percentage,888933046228.csv
+1175, - Disagree,Percentage,888933046228.csv
+1176, - Agree,Percentage,888933046228.csv
+1177, - Strongly agree,Percentage,888933046228.csv
+1178,Present a summary of recently learned content - Never or almost never,Percentage,888933046361.csv
+1179, - Occasionally,Percentage,888933046361.csv
+1180, - Frequently,Percentage,888933046361.csv
+1181, - In all or nearly all lessons,Percentage,888933046361.csv
+1182,Students work in small groups to come up with a joint solution to a problem or task - Never or almost never,Percentage,888933046361.csv
+1183, - Occasionally,Percentage,888933046361.csv
+1184, - Frequently,Percentage,888933046361.csv
+1185, - In all or nearly all lessons,Percentage,888933046361.csv
+1186,Give different work to the students who have difficulties learning and/or to those who can advance faster - Never or almost never,Percentage,888933046361.csv
+1187, - Occasionally,Percentage,888933046361.csv
+1188, - Frequently,Percentage,888933046361.csv
+1189, - In all or nearly all lessons,Percentage,888933046361.csv
+1190,Refer to a problem from everyday life or work to demonstrate why new knowledge is useful - Never or almost never,Percentage,888933046361.csv
+1191, - Occasionally,Percentage,888933046361.csv
+1192, - Frequently,Percentage,888933046361.csv
+1193, - In all or nearly all lessons,Percentage,888933046361.csv
+1194,Let students practice similar tasks until teacher knows that every student has understood the subject matter - Never or almost never,Percentage,888933046361.csv
+1195, - Occasionally,Percentage,888933046361.csv
+1196, - Frequently,Percentage,888933046361.csv
+1197, - In all or nearly all lessons,Percentage,888933046361.csv
+1198,Check students'  exercise books or homework - Never or almost never,Percentage,888933046361.csv
+1199, - Occasionally,Percentage,888933046361.csv
+1200, - Frequently,Percentage,888933046361.csv
+1201, - In all or nearly all lessons,Percentage,888933046361.csv
+1202,Students work on projects that require at least one week to complete - Never or almost never,Percentage,888933046361.csv
+1203, - Occasionally,Percentage,888933046361.csv
+1204, - Frequently,Percentage,888933046361.csv
+1205, - In all or nearly all lessons,Percentage,888933046361.csv
+1206,Students use ICT for projects or class work - Never or almost never,Percentage,888933046361.csv
+1207, - Occasionally,Percentage,888933046361.csv
+1208, - Frequently,Percentage,888933046361.csv
+1209, - In all or nearly all lessons,Percentage,888933046361.csv
+1210,Develop and administer own assessment - Never or almost never,Percentage,888933046779.csv
+1211, - Occasionally,Percentage,888933046779.csv
+1212, - Frequently,Percentage,888933046779.csv
+1213, - In all or nearly all lessons,Percentage,888933046779.csv
+1214,Administer a standardised test - Never or almost never,Percentage,888933046779.csv
+1215, - Occasionally,Percentage,888933046779.csv
+1216, - Frequently,Percentage,888933046779.csv
+1217, - In all or nearly all lessons,Percentage,888933046779.csv
+1218,Individual students answer questions in front of the class - Never or almost never,Percentage,888933046779.csv
+1219, - Occasionally,Percentage,888933046779.csv
+1220, - Frequently,Percentage,888933046779.csv
+1221, - In all or nearly all lessons,Percentage,888933046779.csv
+1222,Provide written feedback on student work in addition to a mark i.e. numeric score or letter grade - Never or almost never,Percentage,888933046779.csv
+1223, - Occasionally,Percentage,888933046779.csv
+1224, - Frequently,Percentage,888933046779.csv
+1225, - In all or nearly all lessons,Percentage,888933046779.csv
+1226,Let students evaluate their own progress - Never or almost never,Percentage,888933046779.csv
+1227, - Occasionally,Percentage,888933046779.csv
+1228, - Frequently,Percentage,888933046779.csv
+1229, - In all or nearly all lessons,Percentage,888933046779.csv
+1230,Observe students when working on particular tasks and provide immediate feedback - Never or almost never,Percentage,888933046779.csv
+1231, - Occasionally,Percentage,888933046779.csv
+1232, - Frequently,Percentage,888933046779.csv
+1233, - In all or nearly all lessons,Percentage,888933046779.csv
+1234,My role as a teacher is to facilitate students' own inquiry - Strongly disagree,Percentage,888933046912.csv
+1235, - Disagree,Percentage,888933046912.csv
+1236, - Agree,Percentage,888933046912.csv
+1237, - Strongly agree,Percentage,888933046912.csv
+1238,Students learn best by finding solutions to problems on their own - Strongly disagree,Percentage,888933046912.csv
+1239, - Disagree,Percentage,888933046912.csv
+1240, - Agree,Percentage,888933046912.csv
+1241, - Strongly agree,Percentage,888933046912.csv
+1242,Students should be allowed to think of solutions to practical problems themselves before the teacher shows them how they are solved - Strongly disagree,Percentage,888933046912.csv
+1243, - Disagree,Percentage,888933046912.csv
+1244, - Agree,Percentage,888933046912.csv
+1245, - Strongly agree,Percentage,888933046912.csv
+1246,Thinking and reasoning processes are more important than specific curriculum content - Strongly disagree,Percentage,888933046912.csv
+1247, - Disagree,Percentage,888933046912.csv
+1248, - Agree,Percentage,888933046912.csv
+1249, - Strongly agree,Percentage,888933046912.csv
+1250,Teach jointly as a team in the same class - Never,Percentage,888933047064.csv
+1251, - Once a year or less,Percentage,888933047064.csv
+1252, - 2-4 times a year,Percentage,888933047064.csv
+1253, - 5-10 times a year,Percentage,888933047064.csv
+1254, - 1-3 times a month,Percentage,888933047064.csv
+1255, - Once a week or more,Percentage,888933047064.csv
+1256,Observe other teachers' classes and provide feedback - Never,Percentage,888933047064.csv
+1257, - Once a year or less,Percentage,888933047064.csv
+1258, - 2-4 times a year,Percentage,888933047064.csv
+1259, - 5-10 times a year,Percentage,888933047064.csv
+1260, - 1-3 times a month,Percentage,888933047064.csv
+1261, - Once a week or more,Percentage,888933047064.csv
+1262,Engage in joint activities across different classes and age groups (e.g. projects) - Never,Percentage,888933047064.csv
+1263, - Once a year or less,Percentage,888933047064.csv
+1264, - 2-4 times a year,Percentage,888933047064.csv
+1265, - 5-10 times a year,Percentage,888933047064.csv
+1266, - 1-3 times a month,Percentage,888933047064.csv
+1267, - Once a week or more,Percentage,888933047064.csv
+1268,Exchange teaching materials with colleagues - Never,Percentage,888933047064.csv
+1269, - Once a year or less,Percentage,888933047064.csv
+1270, - 2-4 times a year,Percentage,888933047064.csv
+1271, - 5-10 times a year,Percentage,888933047064.csv
+1272, - 1-3 times a month,Percentage,888933047064.csv
+1273, - Once a week or more,Percentage,888933047064.csv
+1274,Engage in discussions about the learning development of specific students - Never,Percentage,888933047064.csv
+1275, - Once a year or less,Percentage,888933047064.csv
+1276, - 2-4 times a year,Percentage,888933047064.csv
+1277, - 5-10 times a year,Percentage,888933047064.csv
+1278, - 1-3 times a month,Percentage,888933047064.csv
+1279, - Once a week or more,Percentage,888933047064.csv
+1280,Work with other teachers in my school to ensure common standards in evaluations for assessing student progress - Never,Percentage,888933047064.csv
+1281, - Once a year or less,Percentage,888933047064.csv
+1282, - 2-4 times a year,Percentage,888933047064.csv
+1283, - 5-10 times a year,Percentage,888933047064.csv
+1284, - 1-3 times a month,Percentage,888933047064.csv
+1285, - Once a week or more,Percentage,888933047064.csv
+1286,Attend team conferences - Never,Percentage,888933047064.csv
+1287, - Once a year or less,Percentage,888933047064.csv
+1288, - 2-4 times a year,Percentage,888933047064.csv
+1289, - 5-10 times a year,Percentage,888933047064.csv
+1290, - 1-3 times a month,Percentage,888933047064.csv
+1291, - Once a week or more,Percentage,888933047064.csv
+1292,Take part in collaborative professional learning - Never,Percentage,888933047064.csv
+1293, - Once a year or less,Percentage,888933047064.csv
+1294, - 2-4 times a year,Percentage,888933047064.csv
+1295, - 5-10 times a year,Percentage,888933047064.csv
+1296, - 1-3 times a month,Percentage,888933047064.csv
+1297, - Once a week or more,Percentage,888933047064.csv
+1298,Administrative tasks,Percentage,888933047273.csv
+1299,Keeping order in the classroom,Percentage,888933047273.csv
+1300,Actual teaching and learning,Percentage,888933047273.csv
+1301,When the lesson begins I have to wait quite a long time for students to quiet down - Strongly disagree,Percentage,888933047368.csv
+1302, - Disagree,Percentage,888933047368.csv
+1303, - Agree,Percentage,888933047368.csv
+1304, - Strongly agree,Percentage,888933047368.csv
+1305,Students in this class take care to create a pleasant atmosphere - Strongly disagree,Percentage,888933047368.csv
+1306, - Disagree,Percentage,888933047368.csv
+1307, - Agree,Percentage,888933047368.csv
+1308, - Strongly agree,Percentage,888933047368.csv
+1309,I lose quite a lot of time because of students interrupting the lesson - Strongly disagree,Percentage,888933047368.csv
+1310, - Disagree,Percentage,888933047368.csv
+1311, - Agree,Percentage,888933047368.csv
+1312, - Strongly agree,Percentage,888933047368.csv
+1313,There is much disruptive noise in this classroom - Strongly disagree,Percentage,888933047368.csv
+1314, - Disagree,Percentage,888933047368.csv
+1315, - Agree,Percentage,888933047368.csv
+1316, - Strongly agree,Percentage,888933047368.csv
+1317,The advantages of being a teacher clearly outweigh the disadvantages - Strongly disagree,Percentage,888933047520.csv
+1318, - Disagree,Percentage,888933047520.csv
+1319, - Agree,Percentage,888933047520.csv
+1320, - Strongly agree,Percentage,888933047520.csv
+1321,If I could decide again I would still choose to work as a teacher - Strongly disagree,Percentage,888933047520.csv
+1322, - Disagree,Percentage,888933047520.csv
+1323, - Agree,Percentage,888933047520.csv
+1324, - Strongly agree,Percentage,888933047520.csv
+1325,I would like to change to another school if that were possible - Strongly disagree,Percentage,888933047520.csv
+1326, - Disagree,Percentage,888933047520.csv
+1327, - Agree,Percentage,888933047520.csv
+1328, - Strongly agree,Percentage,888933047520.csv
+1329,I regret that I decided to become a teacher - Strongly disagree,Percentage,888933047520.csv
+1330, - Disagree,Percentage,888933047520.csv
+1331, - Agree,Percentage,888933047520.csv
+1332, - Strongly agree,Percentage,888933047520.csv
+1333,I enjoy working at this school - Strongly disagree,Percentage,888933047520.csv
+1334, - Disagree,Percentage,888933047520.csv
+1335, - Agree,Percentage,888933047520.csv
+1336, - Strongly agree,Percentage,888933047520.csv
+1337,I wonder whether it would have been better to choose another profession - Strongly disagree,Percentage,888933047520.csv
+1338, - Disagree,Percentage,888933047520.csv
+1339, - Agree,Percentage,888933047520.csv
+1340, - Strongly agree,Percentage,888933047520.csv
+1341,I would recommend my school as a good place to work - Strongly disagree,Percentage,888933047520.csv
+1342, - Disagree,Percentage,888933047520.csv
+1343, - Agree,Percentage,888933047520.csv
+1344, - Strongly agree,Percentage,888933047520.csv
+1345,I think that the teaching profession is valued in society - Strongly disagree,Percentage,888933047520.csv
+1346, - Disagree,Percentage,888933047520.csv
+1347, - Agree,Percentage,888933047520.csv
+1348, - Strongly agree,Percentage,888933047520.csv
+1349,I am satisfied with my performance in this school - Strongly disagree,Percentage,888933047520.csv
+1350, - Disagree,Percentage,888933047520.csv
+1351, - Agree,Percentage,888933047520.csv
+1352, - Strongly agree,Percentage,888933047520.csv
+1353,All in all I am satisfied with my job - Strongly disagree,Percentage,888933047520.csv
+1354, - Disagree,Percentage,888933047520.csv
+1355, - Agree,Percentage,888933047520.csv
+1356, - Strongly agree,Percentage,888933047520.csv

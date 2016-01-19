@@ -1,80 +1,39 @@
 rm(list=ls())
 library(sparcl)
-# Change working directory to the source file location
-source("clusteringLibrary.R")
 
-# GENERATE FAKE DATA
-rdata <- readData("merged_features.csv");
-a.ini <- rdata$a
-a <- a.ini
-y <- rdata$y
-scoresSorted <- rdata$scores;
+# REAL DATA
+dataC <- read.csv("merged_features_short.csv",header = TRUE)
 
-# Compute dendogram and bootstrap test of initial data
-source("initializeGroups.R")
+features <- read.csv("list_of_features.csv",header = TRUE)
 
-maxRemovedFeatures <- 200
-SIGNIFICANCE <- 0.1
-if (p > SIGNIFICANCE) {
-  # REPEAT THIS LOOP UNTIL STOPPING CONDITION IS MET
-  repeat {
-    if (removedFeatures >= maxRemovedFeatures)
-      break
-    # REMOVE FEATURE
-    a.old <- a;
-    orderedWeights.old <- orderedWeights;
-    a <- removeFeature(a,orderedWeights,nFeature);
-    
-    # COMPUTE DENDOGRAM
-    kmeans <- computeKMeans(a,y);
-    orderedWeights <- kmeans$orderedWeights;
-    
-    # BOOTSTRAP TEST FOR TESTING EQUALITY OF MEANS
-    GROUPS <- kmeans$groups
-    p <- permutationTest(GROUPS);
-    # print(paste("p-value=",p))
-    # If p < 0.05 this means groups are different
-    if (p < SIGNIFICANCE) {
-      break;
-    } else {
-      if (p > p.old) {
-        enworsement <- p-p.old;
-        if (enworsement < enworsement.least) {
-          lessBadFeature <- nFeature
-          enworsement.least <- enworsement
-          lessBadOrder <- orderedWeights
-        }
-        # If p has increased this means result is worse
-        # Readd feature and remove next one in next iteration
-        a <- a.old
-        orderedWeights <- orderedWeights.old
-        print(paste0("Readd one feature, p=",toString(p)))
-        nFeature <- nFeature + 1
-        if (nFeature >= 9-removedFeatures) {
-          a <- removeFeature(a,lessBadOrder,lessBadFeature);
-          removedFeatures <- removedFeatures+1
-          print(paste0("Removed one feature, p=",toString(p)))
-          nFeature <- 1
-        }
-        next
-      } else {
-        # If result is better but not good enough
-        # Keep removing features
-        removedFeatures <- removedFeatures+1
-        print(paste0("Removed one feature, p=",toString(p)))
-        nFeature <- 1
-        p.old <- p
-        next
-      }#end of else
-    }#end of else
-  }#end of repeat
-}#end of if
+dataCTemporal <- rbind(1:ncol(dataC),dataC[,-1])
 
-# ficar aqui script per mostrar features rellevants
-print("Most relevant features:")
-print(mostRelevant(a,a.ini))
-print("Group1:")
-print(GROUPS[[1]])
-print("Group2:")
-print(GROUPS[[2]])
-print(paste("Last p-value =",p))
+#features <- features[colSums(is.na(dataC))==0,]
+#features <- features[!apply(dataC,2,function(x){any(x=='a')}),]
+#features <- features[!apply(features,1,function(x){any(is.na(x))}),]
+
+dataCTemporal <- dataCTemporal[,colSums(is.na(dataCTemporal))==0]
+# other weird values such as '0' o 'a'
+dataCTemporal <- dataCTemporal[,!apply(dataCTemporal,2,function(x){any(x=='a')})]
+keptFeatures <- dataCTemporal[1,]
+dataCTemporal <- dataCTemporal[-1,]
+dataC <- cbind(dataC[,1],dataCTemporal)
+
+PISA <- read.csv("PISA.csv",header = FALSE)
+PISA <- PISA[rowSums(is.na(PISA))==0,]
+
+
+data <- cbind(PISA$V2,dataC)
+data <- data[,-2] #delete first column (countries' names)
+
+a <- as.matrix(data)
+a <- a[order(a[,1]),]
+a <- cbind(a[,1],apply(a[,-1],2, function(i) {i/(max(i)-min(i))})) #Normalization: divide by range of column features
+rownames(a) <- NULL
+colnames(a) <- NULL
+p <- 0
+scores <- a[,1]
+scoresSorted <- sort(scores,decreasing = FALSE) #From lowest to greatest
+
+#SHUFFLE DATA MATRIX BY COLUMNS
+aIni <- a

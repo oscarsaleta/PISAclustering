@@ -392,14 +392,14 @@ forwardFeatureAddition <- function(a,r) {
     
   }#end-repeat
   
-  return(list(p=pPrev,aCluster=aCluster))
+  return(list(p=pPrev,aCluster=aCluster,cl=cl))
   
 }
 #########################################################################
 
 #   GET GROUPS FROM FORWARD ADDITION OUTPUT   ###########################
 #########################################################################
-getGroups <- function(aIni,r,pPrev,aCluster,print=FALSE) {
+getGroups <- function(aIni,r,pPrev,aCluster,cl,print=FALSE) {
   if (print==TRUE) {
     print("r: ")
     print(r)
@@ -414,11 +414,15 @@ getGroups <- function(aIni,r,pPrev,aCluster,print=FALSE) {
       }
     }
   }
-  if (print==TRUE)
-    print(relevantFeatures)
+    
   Group1 <- NULL
   Group2 <- NULL
-  cl<-kmeans(aCluster,2)
+  #cl<-kmeans(aCluster,2)
+  
+  if (print==TRUE) {
+    print(relevantFeatures)
+    plot(aIni[,1],col=cl$cluster)
+  }
   
   for(i in 1:30){
     if(cl$cluster[[i]] == 1){
@@ -432,28 +436,30 @@ getGroups <- function(aIni,r,pPrev,aCluster,print=FALSE) {
 }
 #########################################################################
 
-loopThroughSeeds <- function(a,maxSeed) {
+loopThroughSeeds <- function(a,minSeed,maxSeed) {
   sortedScores <- getSortedScores(a)
   fitness <- 0
   bestFitness <- 0
-  for (i in 0:maxSeed) {
+  for (i in minSeed:maxSeed) {
     f <- forwardFeatureAddition(a,i)
     groups <- getGroups(a,i,f$p,f$aCluster)
     badTail <- sortedScores[1:floor(0.25*length(sortedScores))]
     goodTail <- sortedScores[ceiling(0.75*length(sortedScores)):length(sortedScores)]
     fitness <- 0
     for (j in 1:length(groups[['g1']])) {
-      if (groups[['g1']][j] %in% goodTail) 
+      if (groups[['g1']][j] %in% badTail) 
         fitness <- fitness+1
     }
     for (j in 1:length(groups[['g2']])) {
-      if (groups[['g2']][j] %in% badTail)
+      if (groups[['g2']][j] %in% goodTail)
         fitness <- fitness+1
     }
     if (fitness>bestFitness) {
       bestFitness <- fitness
       bestSeed <- i
+      accuracy <- bestFitness/length(c(badTail,goodTail))
+      bestResult <- f
     }
   }
-  return(list(seed=bestSeed,accuracy=bestFitness/length(sortedScores)))
+  return(list(seed=bestSeed,accuracy=accuracy,result=bestResult))
 }
