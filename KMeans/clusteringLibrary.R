@@ -130,22 +130,24 @@ generateData2 <- function() {
 #########################################################################
 
 
-
 #    READ DATA FROM FILE    #############################################
 #########################################################################
-readData <- function(fitxer) {
-  dataC <- read.csv(fitxer)
-  # delete Portugal5 (row 24)
-  dataC <- dataC[-24,]
-  data <- dataC[,!apply(dataC,2,function(x) { any( (x=='a') | is.na(x) ) })]
+readData <- function(dataFile,featureFile) {
+  # read data file
+  dataC <- read.csv(dataFile)
+  featureList <- read.csv(featureFile)
+  # remove bad columns
+  data <- dataC[,!apply(dataC,2,function(x) { any( is.na(x) ) })]
+  data <- data[sapply(data,is.numeric)]
+  features <- featureList[!apply(dataC,2,function(x) { any( (x=='a') | is.na(x) ) }),]
   PISA <- read.csv("PISA.csv",header = FALSE)
   PISA <- PISA[rowSums(is.na(PISA))==0,]
+  PISA <- PISA[-6,] # rip croatia
   data <- cbind(PISA$V2,data)
-  data <- data[,-2] #delete first column (countries' names)
-  a <- as.matrix(data)
+  a <- as.matrix(data[,-2])
   a <- a[order(a[,1]),]
-  y <- c(rep(1,length(a[,1])/2),rep(2,length(a[,1])-length(a[,1])/2))
-  return(list(y=y,a=a,score=sort(PISA$V2)))
+  dimnames(a) <- NULL
+  return(list(a=a,countries=data[,2],PISA=PISA,features=features))
 }
 #########################################################################
 
@@ -417,14 +419,13 @@ getGroups <- function(aIni,r,pPrev,aCluster,cl,print=FALSE) {
     
   Group1 <- NULL
   Group2 <- NULL
-  #cl<-kmeans(aCluster,2)
   
   if (print==TRUE) {
     print(relevantFeatures)
     plot(aIni[,1],col=cl$cluster)
   }
   
-  for(i in 1:30){
+  for(i in 1:nrow(a)){
     if(cl$cluster[[i]] == 1){
       Group1<-cbind(Group1,a[i,1])
     }
@@ -442,24 +443,27 @@ loopThroughSeeds <- function(a,minSeed,maxSeed) {
   bestFitness <- 0
   for (i in minSeed:maxSeed) {
     f <- forwardFeatureAddition(a,i)
-    groups <- getGroups(a,i,f$p,f$aCluster)
+    groups <- getGroups(a,i,f$p,f$aCluster,f$cl)
     badTail <- sortedScores[1:floor(0.25*length(sortedScores))]
     goodTail <- sortedScores[ceiling(0.75*length(sortedScores)):length(sortedScores)]
     fitness <- 0
-    for (j in 1:length(groups[['g1']])) {
-      if (groups[['g1']][j] %in% badTail) 
+    for (j in 1:length(groups$g1)) {
+      if (groups$g1[j] %in% badTail) 
         fitness <- fitness+1
     }
-    for (j in 1:length(groups[['g2']])) {
-      if (groups[['g2']][j] %in% goodTail)
+    for (j in 1:length(groups$g2)) {
+      if (groups$g2[j] %in% goodTail)
         fitness <- fitness+1
     }
     if (fitness>bestFitness) {
+      print(paste("New best seed found:",i))
       bestFitness <- fitness
       bestSeed <- i
       accuracy <- bestFitness/length(c(badTail,goodTail))
       bestResult <- f
     }
+    if (accuracy==1)
+      break;
   }
   return(list(seed=bestSeed,accuracy=accuracy,result=bestResult))
 }
