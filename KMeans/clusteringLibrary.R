@@ -144,10 +144,10 @@ readData <- function(dataFile,featureFile) {
   PISA <- PISA[rowSums(is.na(PISA))==0,]
   PISA <- PISA[-6,] # rip croatia
   data <- cbind(PISA$V2,data)
-  a <- as.matrix(data[,-2])
-  a <- a[order(a[,1]),]
+  a <- as.matrix(data)
+  a <- a[order(a[,2]),]
   dimnames(a) <- NULL
-  return(list(a=a,countries=data[,2],PISA=PISA,features=features))
+  return(list(a=a,countries=dataC[order(dataC[,1]),][,1],PISA=PISA,features=features))
 }
 #########################################################################
 
@@ -437,8 +437,11 @@ getGroups <- function(aIni,r,pPrev,aCluster,cl,print=FALSE) {
 }
 #########################################################################
 
-loopThroughSeeds <- function(a,minSeed,maxSeed) {
+loopThroughSeeds <- function(a,countries,minSeed,maxSeed) {
   sortedScores <- getSortedScores(a)
+  # this matrix will have seed i in column i+1 and row 1 is p-value!
+  groupmatrix <- matrix(NA,nrow=nrow(a)+1,ncol=1+maxSeed-minSeed,
+                        dimnames=list(c("pval",countries),seq(minSeed,maxSeed)))
   fitness <- 0
   bestFitness <- 0
   for (i in minSeed:maxSeed) {
@@ -457,6 +460,13 @@ loopThroughSeeds <- function(a,minSeed,maxSeed) {
     }
     if (fitness>bestFitness) {
       print(paste("New best seed found:",i))
+      groupmatrix[1,i] <- f$p
+      for (j in 1:nrow(a)) {
+        if (j %in% groups$g1)
+          groupmatrix[j+1,i+1] <- 1
+        if (j %in% groups$g2)
+          groupmatrix[j+1,i+1] <- 2
+      }
       bestFitness <- fitness
       bestSeed <- i
       accuracy <- bestFitness/length(c(badTail,goodTail))
@@ -465,5 +475,6 @@ loopThroughSeeds <- function(a,minSeed,maxSeed) {
     if (accuracy==1)
       break;
   }
-  return(list(seed=bestSeed,accuracy=accuracy,result=bestResult))
+  groupmatrix <- groupmatrix[,!apply(groupmatrix,2,function(x){any(is.na(x))})]
+  return(list(seed=bestSeed,accuracy=accuracy,result=bestResult,groupMatrix=groupmatrix))
 }
