@@ -430,13 +430,34 @@ getGroups <- function(aIni,r,pPrev,aCluster,cl,print=FALSE) {
 #########################################################################
 
 
+#   USE SELECTED SEED FOR COMPUTATION   #################################
+#########################################################################
+computeWithSeed <- function(a,seed) {
+  sortedScores <- getSortedScores(a)
+  # this matrix will have seed i in column i+1 and row 1 is p-value!
+  f <- forwardFeatureAddition(a,seed)
+  groups <- getGroups(a,seed,f$p,f$aCluster,f$cl)
+  badTail <- sortedScores[1:floor(0.25*length(sortedScores))]
+  goodTail <- sortedScores[ceiling(0.75*length(sortedScores)):length(sortedScores)]
+  fitness <- 0
+  for (j in 1:length(groups$g1)) {
+    if (groups$g1[j] %in% badTail) 
+      fitness <- fitness+1
+  }
+  for (j in 1:length(groups$g2)) {
+    if (groups$g2[j] %in% goodTail)
+      fitness <- fitness+1
+  }
+  return(list(accuracy=accuracy,result=f,rFeatures=groups$relevantFeatures,groups=groups))
+}
+
 #   LOOP THROUGH ALL THE SEEDS   ########################################
 #########################################################################
 loopThroughSeeds <- function(a,countries,minSeed,maxSeed) {
   sortedScores <- getSortedScores(a)
   # this matrix will have seed i in column i+1 and row 1 is p-value!
   groupmatrix <- matrix(NA,nrow=nrow(a)+2,ncol=2+maxSeed-minSeed)
-  groupmatrix[1,1] <- "feature"
+  groupmatrix[1,1] <- "seed"
   groupmatrix[2,1] <- "pval"
   for (j in 3:nrow(groupmatrix)) {
     groupmatrix[j,1] <- countries[j-2]
@@ -476,6 +497,7 @@ loopThroughSeeds <- function(a,countries,minSeed,maxSeed) {
       break;
   }
   # groupmatrix <- groupmatrix[,!apply(groupmatrix,2,function(x){any(is.na(x))})]
-  return(list(seed=bestSeed,accuracy=accuracy,result=bestResult,groupMatrix=groupmatrix))
+  return(list(groupMatrix=groupmatrix,seed=bestSeed,accuracy=accuracy,result=bestResult,
+              rFeatures=groups$relevantFeatures))
 }
 #########################################################################

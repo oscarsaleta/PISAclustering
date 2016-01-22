@@ -11,7 +11,7 @@ p <- 0
 scores <- a[,1]
 scoresSorted <- sort(scores,decreasing = FALSE) #From lowest to greatest
 
-test <- loopThroughSeeds(a,countries,0,75)
+test <- loopThroughSeeds(a,countries,2,2)
 save(test,file="Results.RData")
 
 for (j in 1:ncol(test$groupMatrix)) {
