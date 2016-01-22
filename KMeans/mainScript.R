@@ -11,17 +11,17 @@ p <- 0
 scores <- a[,1]
 scoresSorted <- sort(scores,decreasing = FALSE) #From lowest to greatest
 
-test <- loopThroughSeeds(a,countries,0,4)
+test <- loopThroughSeeds(a,countries,0,75)
 save(test,file="Results.RData")
 
 for (j in 1:ncol(test$groupMatrix)) {
-  if (is.na(test$groupMatrix[3,j]))
+  if (is.na(test$groupMatrix[1,j]))
     next
-  png(filename=paste0("seed",j,".png"))
+  png(filename=paste0("seed",j-1,".png"))
   par(new=F)
-  stripchart(scores[test$groupMatrix[-c(1,2),][,j]==1],col=1,xlim = c(min(scores),max(scores)))
+  stripchart(scores[test$groupMatrix[-c(1,2),][,j+2]==1],col=1,xlim = c(min(scores),max(scores)))
   par(new=T)
-  stripchart(scores[test$groupMatrix[-c(1,2),][,j]==2],col=2,axes=F)
+  stripchart(scores[test$groupMatrix[-c(1,2),][,j+2]==2],col=2,axes=F,xlim=c(min(scores),max(scores)))
   dev.off
 }
 

@@ -459,13 +459,13 @@ loopThroughSeeds <- function(a,countries,minSeed,maxSeed) {
     }
     if (fitness>bestFitness) {
       print(paste("New best seed found:",i))
-      groupmatrix[1,i+1] <- i
-      groupmatrix[2,i+1] <- f$p
+      groupmatrix[1,i+2] <- i
+      groupmatrix[2,i+2] <- f$p
       for (j in 1:nrow(a)) {
         if (sortedScores[j] %in% groups$g1)
-          groupmatrix[j+1,i+1] <- 1
+          groupmatrix[j+2,i+2] <- 1
         if (sortedScores[j] %in% groups$g2)
-          groupmatrix[j+1,i+1] <- 2
+          groupmatrix[j+2,i+2] <- 2
       }
       bestFitness <- fitness
       bestSeed <- i
