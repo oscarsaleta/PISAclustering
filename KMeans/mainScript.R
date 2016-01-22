@@ -11,7 +11,7 @@ p <- 0
 scores <- a[,1]
 scoresSorted <- sort(scores,decreasing = FALSE) #From lowest to greatest
 
-test <- loopThroughSeeds(a,countries,2,2)
+test <- loopThroughSeeds(a,countries,0,2,0.2)
 save(test,file="Results.RData")
 
 for (j in 1:ncol(test$groupMatrix)) {
@@ -26,3 +26,11 @@ for (j in 1:ncol(test$groupMatrix)) {
 }
 
 save.image(file=".RData")
+
+seed2 <- computeWithSeed(a,2,0.15)
+seed2$accuracy
+length(seed2$groups$relevantFeatures)
+stripchart(scores[seed2$groups$cl$cluster==1],col=1,xlim=c(min(scores),max(scores)))
+par(new=T)
+stripchart(scores[seed2$groups$cl$cluster==2],col=2,xlim=c(min(scores),max(scores)),axes=F)
+par(new=F)
