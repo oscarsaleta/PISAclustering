@@ -341,6 +341,7 @@ forwardFeatureAddition <- function(a,r) {
   
   aCluster <- ab[,-1]
   aCluster <- aCluster[,1]
+  features <- c(1)
   
   #FEATURES LOOP
   repeat{
@@ -372,40 +373,47 @@ forwardFeatureAddition <- function(a,r) {
     }
     
     if(pPrev-p>0.03){
-      #If gets worse
+      #If gets worse, get rid of last feature added
       aCluster <- aCluster[,-(ncol(aCluster))]
+      features <- features[-(ncol(aCluster))]
     }
     else{
       pPrev <- p
     }
   
     aCluster <- cbind(aCluster,a[,n])
+    features <- c(features,n)
     
   }#end-repeat
-  
-  return(list(p=pPrev,aCluster=aCluster,cl=cl))
+  aCluster <- cbind(a[,1],aCluster)
+  return(list(p=pPrev,aCluster=aCluster,rFeatures=features,cl=cl))
   
 }
 #########################################################################
 
 #   GET GROUPS FROM FORWARD ADDITION OUTPUT   ###########################
 #########################################################################
-getGroups <- function(aIni,r,pPrev,aCluster,cl,print=FALSE) {
+getGroups <- function(aIni,r,fAddOut,print=FALSE) {
+  pPrev <- fAddOut$p
+  aCluster <- fAddOut$aCluster
+  cl <- fAddOut$cl
+  relevantFeatures <- fAddOut$rFeatures
   if (print==TRUE) {
     print("r: ")
     print(r)
     print("Final p-value")
     print(pPrev)
   }
-  relevantFeatures <- NULL
-  for(i in 2:ncol(aIni)){
-    for(j in 1:ncol(aCluster)){
-      if((aIni[1,i]==aCluster[1,j])&(aIni[2,i]==aCluster[2,j])){ #To avoid repetitions
-        relevantFeatures <- c(relevantFeatures,i-1)
-      }
-    }
-  }
-    
+#   relevantFeatures <- NULL
+#   for(i in 2:ncol(aIni)){
+#     for(j in 1:ncol(aCluster)){
+#       if((aIni[1,i]==aCluster[1,j])&(aIni[2,i]==aCluster[2,j])){ #To avoid repetitions
+#         relevantFeatures <- c(relevantFeatures,i-1)
+#         # relevantFeatures[k]=l vol dir feature l, columna l+1 de a
+#       }
+#     }
+#   }
+#     
   Group1 <- NULL
   Group2 <- NULL
   
@@ -422,7 +430,7 @@ getGroups <- function(aIni,r,pPrev,aCluster,cl,print=FALSE) {
       Group2<-cbind(Group2,a[i,1])
     }
   }
-  return(list(cl=cl,g1=Group1,g2=Group2,relevantFeatures=relevantFeatures))
+  return(list(g1=Group1,g2=Group2))
 }
 #########################################################################
 
@@ -433,70 +441,103 @@ computeWithSeed <- function(a,seed,threshold) {
   sortedScores <- getSortedScores(a)
   # this matrix will have seed i in column i+1 and row 1 is p-value!
   f <- forwardFeatureAddition(a,seed)
-  groups <- getGroups(a,seed,f$p,f$aCluster,f$cl)
+  groups <- getGroups(a,seed,f)
   badTail <- sortedScores[1:floor(threshold*length(sortedScores))]
   goodTail <- sortedScores[ceiling((1-threshold)*length(sortedScores)):length(sortedScores)]
   fitness <- 0
   for (j in 1:length(groups$g1)) {
-    if (groups$g1[j] %in% badTail) 
+    if (groups$g1[j] %in% goodTail) 
       fitness <- fitness+1
   }
   for (j in 1:length(groups$g2)) {
-    if (groups$g2[j] %in% goodTail)
+    if (groups$g2[j] %in% badTail)
       fitness <- fitness+1
   }
   accuracy <- fitness/length(c(badTail,goodTail))
-  return(list(accuracy=accuracy,result=f,rFeatures=groups$relevantFeatures,groups=groups))
+  return(list(accuracy=accuracy,result=f,groups=groups))
 }
 #########################################################################
 
 #   LOOP THROUGH ALL THE SEEDS   ########################################
 #########################################################################
-loopThroughSeeds <- function(a,countries,minSeed,maxSeed,threshold) {
-  sortedScores <- getSortedScores(a)
-  # this matrix will have seed i in column i+1 and row 1 is p-value!
-  groupmatrix <- matrix(NA,nrow=nrow(a)+2,ncol=2+maxSeed-minSeed)
-  groupmatrix[1,1] <- "seed"
-  groupmatrix[2,1] <- "pval"
-  for (j in 3:nrow(groupmatrix)) {
-    groupmatrix[j,1] <- countries[j-2]
-  }
-  fitness <- 0
-  bestFitness <- 0
-  for (i in minSeed:maxSeed) {
-    f <- forwardFeatureAddition(a,i)
-    groups <- getGroups(a,i,f$p,f$aCluster,f$cl)
-    badTail <- sortedScores[1:floor(threshold*length(sortedScores))]
-    goodTail <- sortedScores[ceiling((1-threshold)*length(sortedScores)):length(sortedScores)]
-    fitness <- 0
-    for (j in 1:length(groups$g1)) {
-      if (groups$g1[j] %in% badTail) 
-        fitness <- fitness+1
-    }
-    for (j in 1:length(groups$g2)) {
-      if (groups$g2[j] %in% goodTail)
-        fitness <- fitness+1
-    }
-    if (fitness>bestFitness) {
-      print(paste("New best seed found:",i))
-      groupmatrix[1,i+2] <- i
-      groupmatrix[2,i+2] <- f$p
-      for (j in 1:nrow(a)) {
-        if (sortedScores[j] %in% groups$g1)
-          groupmatrix[j+2,i+2] <- 1
-        if (sortedScores[j] %in% groups$g2)
-          groupmatrix[j+2,i+2] <- 2
-      }
-      bestFitness <- fitness
-      bestSeed <- i
-      accuracy <- bestFitness/length(c(badTail,goodTail))
-      bestResult <- f
-    }
-    if (accuracy==1)
-      break;
-  }
-  # groupmatrix <- groupmatrix[,!apply(groupmatrix,2,function(x){any(is.na(x))})]
-  return(list(groupMatrix=groupmatrix,seed=bestSeed,accuracy=accuracy,result=bestResult,
-              rFeatures=groups$relevantFeatures))
-}
+# loopThroughSeeds <- function(a,countries,minSeed,maxSeed,threshold) {
+#   sortedScores <- getSortedScores(a)
+#   # this matrix will have seed i in column i+1 and row 1 is p-value!
+#   groupmatrix <- matrix(NA,nrow=nrow(a)+2,ncol=2+maxSeed-minSeed)
+#   groupmatrix[1,1] <- "seed"
+#   groupmatrix[2,1] <- "pval"
+#   for (j in 3:nrow(groupmatrix)) {
+#     groupmatrix[j,1] <- countries[j-2]
+#   }
+#   fitness <- 0
+#   bestFitness <- 0
+#   for (i in minSeed:maxSeed) {
+#     f <- forwardFeatureAddition(a,i)
+#     groups <- getGroups(a,i,f$p,f$aCluster,f$cl)
+#     badTail <- sortedScores[1:floor(threshold*length(sortedScores))]
+#     goodTail <- sortedScores[ceiling((1-threshold)*length(sortedScores)):length(sortedScores)]
+#     fitness <- 0
+#     for (j in 1:length(groups$g1)) {
+#       if (groups$g1[j] %in% goodTail) 
+#         fitness <- fitness+1
+#     }
+#     for (j in 1:length(groups$g2)) {
+#       if (groups$g2[j] %in% badTail)
+#         fitness <- fitness+1
+#     }
+#     if (fitness>bestFitness) {
+#       print(paste("New best seed found:",i))
+#       groupmatrix[1,i+2] <- i
+#       groupmatrix[2,i+2] <- f$p
+#       for (j in 1:nrow(a)) {
+#         if (sortedScores[j] %in% groups$g1)
+#           groupmatrix[j+2,i+2] <- 1
+#         if (sortedScores[j] %in% groups$g2)
+#           groupmatrix[j+2,i+2] <- 2
+#       }
+#       bestFitness <- fitness
+#       bestSeed <- i
+#       accuracy <- bestFitness/length(c(badTail,goodTail))
+#       bestResult <- f
+#     }
+#     if (accuracy==1)
+#       break;
+#   }
+#   # groupmatrix <- groupmatrix[,!apply(groupmatrix,2,function(x){any(is.na(x))})]
+#   return(list(groupMatrix=groupmatrix,seed=bestSeed,accuracy=accuracy,result=bestResult,
+#               rFeatures=groups$relevantFeatures))
+# }
 #########################################################################
+
+fasterSeedLoop <- function(a,minSeed,maxSeed,threshold) {
+  bestAcc <- 0
+  for (seed in minSeed:maxSeed) {
+    print(paste("Computing seed",seed))
+    temp <- computeWithSeed(a,seed,threshold)
+    if(temp$accuracy>bestAcc) {
+      bestAcc <- temp$accuracy
+      bestSeed <- seed
+      bestFit <- temp
+    }
+  }
+  return(list(fit=bestFit,seed=bestSeed,accuracy=bestAcc))
+}
+
+getModelFeatures <- function(relevantFeatures,featureList) {
+  # modelFeatures <- matrix(nrow=length(relevantFeatures),ncol=2);
+  # modelFeatures[,1] <- 1:length(relevantFeatures)
+  # modelFeatures[,2] <- featureList[relevantFeatures]
+  modelFeatures <- data.frame(index=seq(1,length(relevantFeatures)))
+  modelFeatures$names <- featureList[relevantFeatures]
+  return(modelFeatures)
+}
+
+featurePisaCorr <- function(mat) {
+  result <- data.frame(index=seq(1,ncol(mat)-1))
+  corrs <- numeric(ncol(mat)-1)
+  for (i in 2:ncol(mat)) {
+    corrs[i-1] <- cor(mat[,1],mat[,i])
+  }
+  result$cor <- corrs
+  return(result);
+}
