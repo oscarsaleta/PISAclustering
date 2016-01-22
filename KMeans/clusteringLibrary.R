@@ -162,7 +162,6 @@ getSortedScores <- function(a) {
 #########################################################################
 
 
-
 #    REMOVE FEATURE    ##################################################
 #########################################################################
 removeFeature <- function(a,weights,nFeature) {
@@ -171,7 +170,6 @@ removeFeature <- function(a,weights,nFeature) {
   return(a[,-removeCol])
 }
 #########################################################################
-
 
 
 #    COMPUTE K-MEANS    #################################################
@@ -195,7 +193,6 @@ computeKMeans <- function(a,y) {
   GROUPS <- list(which(groups==1),which(groups==2))
   return(list(groups=GROUPS,orderedWeights=orderedWeights))
 }
-
 
 
 #    COMPUTE DENDOGRAM    ###############################################
@@ -234,7 +231,6 @@ computeDendogram <- function(a,y) {
 #########################################################################
 
 
-
 #    CUT DENDOGRAM IN TWO MAIN CLUSTERS    ##############################
 #########################################################################
 cutDendogram2 <- function(DEN) {
@@ -267,7 +263,6 @@ cutDendogram2 <- function(DEN) {
 #########################################################################
 
 
-
 #   GROUP STATISTICS    #################################################
 #########################################################################
 computeStats <- function(GROUPS) {
@@ -283,7 +278,6 @@ computeStats <- function(GROUPS) {
   return(list(results=RESULTS_list,means=means,sd=standardDev))
 }
 #########################################################################
-
 
 
 #    PERMUTATION TEST    ################################################
@@ -320,7 +314,6 @@ permutationTest <- function(GROUPS) {
 #########################################################################
 
 
-
 #    PRINT MOST RELEVANT FEATURES    ####################################
 #########################################################################
 mostRelevant <- function(a,a.ini) {
@@ -334,7 +327,6 @@ mostRelevant <- function(a,a.ini) {
   return(relevantFeatures)
 }
 #########################################################################
-
 
 
 #   FORWARD FEATURE ADDITION    #########################################
@@ -437,11 +429,18 @@ getGroups <- function(aIni,r,pPrev,aCluster,cl,print=FALSE) {
 }
 #########################################################################
 
+
+#   LOOP THROUGH ALL THE SEEDS   ########################################
+#########################################################################
 loopThroughSeeds <- function(a,countries,minSeed,maxSeed) {
   sortedScores <- getSortedScores(a)
   # this matrix will have seed i in column i+1 and row 1 is p-value!
-  groupmatrix <- matrix(NA,nrow=nrow(a)+1,ncol=1+maxSeed-minSeed,
-                        dimnames=list(c("pval",countries),seq(minSeed,maxSeed)))
+  groupmatrix <- matrix(NA,nrow=nrow(a)+2,ncol=2+maxSeed-minSeed)
+  groupmatrix[1,1] <- "feature"
+  groupmatrix[2,1] <- "pval"
+  for (j in 3:nrow(groupmatrix)) {
+    groupmatrix[j,1] <- countries[j-2]
+  }
   fitness <- 0
   bestFitness <- 0
   for (i in minSeed:maxSeed) {
@@ -460,7 +459,8 @@ loopThroughSeeds <- function(a,countries,minSeed,maxSeed) {
     }
     if (fitness>bestFitness) {
       print(paste("New best seed found:",i))
-      groupmatrix[1,i+1] <- f$p
+      groupmatrix[1,i+1] <- i
+      groupmatrix[2,i+1] <- f$p
       for (j in 1:nrow(a)) {
         if (sortedScores[j] %in% groups$g1)
           groupmatrix[j+1,i+1] <- 1
@@ -475,6 +475,7 @@ loopThroughSeeds <- function(a,countries,minSeed,maxSeed) {
     if (accuracy==1)
       break;
   }
-  groupmatrix <- groupmatrix[,!apply(groupmatrix,2,function(x){any(is.na(x))})]
+  # groupmatrix <- groupmatrix[,!apply(groupmatrix,2,function(x){any(is.na(x))})]
   return(list(seed=bestSeed,accuracy=accuracy,result=bestResult,groupMatrix=groupmatrix))
 }
+#########################################################################
