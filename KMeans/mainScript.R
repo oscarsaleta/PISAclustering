@@ -65,5 +65,5 @@ plot(scores,col=kmcl$result$cl$cluster,pch=19,xlab="Country index",ylab="PISA sc
 lines(0:30,rep(460,31),col=3)
 lines(0:30,rep(mean(model$matrix[kmcl$groups$g1,1]),31),type="b",pch=NA)
 lines(0:30,rep(mean(model$matrix[kmcl$groups$g2,1]),31),type="b",pch=NA,col=2)
-legend("topright",c("Group 1","Group 2"))
+legend("topright",c("Group 1","Group 2"),pch=19,col=c(1,2))
 # load(".RData",.GlobalEnv)
