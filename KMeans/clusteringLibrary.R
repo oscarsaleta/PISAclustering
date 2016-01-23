@@ -193,6 +193,7 @@ getSortedScores <- function(a) {
 #   GROUPS <- list(which(groups==1),which(groups==2))
 #   return(list(groups=GROUPS,orderedWeights=orderedWeights))
 # }
+#########################################################################
 
 
 #    COMPUTE DENDOGRAM    ###############################################
@@ -333,7 +334,9 @@ permutationTest <- function(GROUPS) {
 #########################################################################
 forwardFeatureAddition <- function(a,r) {
   set.seed(r)
-  ab <- cbind(a[,1],a[,sample(2:ncol(a))])
+  f.index <- seq(2,ncol(a))
+  f.perm <- sample(f.index,rep=F)
+  ab <- cbind(a[,1],a[,f.perm])
   n<-2
   index <- n
   pPrev<- 0
@@ -382,7 +385,7 @@ forwardFeatureAddition <- function(a,r) {
     }
   
     aCluster <- cbind(aCluster,a[,n])
-    features <- c(features,n)
+    features <- c(features,f.perm[n])
     
   }#end-repeat
   aCluster <- cbind(a[,1],aCluster)
@@ -441,20 +444,21 @@ getGroups <- function(aIni,r,fAddOut,print=FALSE) {
 #########################################################################
 computeWithSeed <- function(a,seed,threshold) {
   sortedScores <- getSortedScores(a)
+  scores <- a[,1]
   # this matrix will have seed i in column i+1 and row 1 is p-value!
   f <- forwardFeatureAddition(a,seed)
   groups <- getGroups(a,seed,f)
-  # badTail <- sortedScores[1:floor(threshold*length(sortedScores))]
-  badTail <- seq(1,floor(threshold*length(sortedScores)))
-  # goodTail <- sortedScores[ceiling((1-threshold)*length(sortedScores)):length(sortedScores)]
-  goodTail <- seq(ceiling((1-threshold)*length(sortedScores)),length(sortedScores))
+  badTail <- sortedScores[1:floor(threshold*length(sortedScores))]
+  # badTail <- seq(1,floor(threshold*length(sortedScores)))
+  goodTail <- sortedScores[ceiling((1-threshold)*length(sortedScores)):length(sortedScores)]
+  # goodTail <- seq(ceiling((1-threshold)*length(sortedScores)),length(sortedScores))
   fitness <- 0
   for (j in 1:length(groups$g1)) {
-    if (groups$g1[j] %in% goodTail) 
+    if (scores[groups$g1[j]] %in% goodTail) 
       fitness <- fitness+1
   }
   for (j in 1:length(groups$g2)) {
-    if (groups$g2[j] %in% badTail)
+    if (scores[groups$g2[j]] %in% badTail)
       fitness <- fitness+1
   }
   accuracy <- fitness/length(c(badTail,goodTail))
